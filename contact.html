@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="Contact Velo Co. Salon — reach out for appointments, inquiries, bridal consultations, or questions about our Ann Arbor studio.">
-  <title>Contact | Velo Co. Salon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Contact — Velo Co. Salon</title>
+  <meta name="description" content="Reach out to Velo Co. Salon in Ann Arbor, MI. Book an appointment, ask a question, or find our contact details." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <nav class="navbar scrolled" id="navbar" aria-label="Main navigation">
-    <div class="navbar-inner">
-      <a href="index.html" class="nav-logo">Velo Co.</a>
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Velo Co. Salon home">
+        <span class="logo-velo">Velo</span><span class="logo-co"> Co.</span>
+      </a>
       <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="story.html">Our Story</a></li>
@@ -24,187 +27,314 @@
         <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
-      <a href="#" class="btn nav-cta demo-trigger">Book Now</a>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="contact.html" class="btn btn-primary nav-cta demo-trigger">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#x2715;</button>
-    <a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a>
-    <a href="story.html">Our Story</a><a href="team.html">Team</a><a href="visit.html">Visit</a>
-    <a href="contact.html">Contact</a><a href="#" class="mobile-cta demo-trigger">Book Now</a>
-  </nav>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#215;</button>
+    <a href="index.html" class="mobile-logo">Velo Co.</a>
+    <ul role="list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="visit.html">Visit</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary demo-trigger" style="margin-top:2rem;">Book Now</a>
+  </div>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <section class="page-hero" aria-label="Contact hero">
-    <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Velo Co. interior" class="page-hero-img" loading="lazy">
-    <div class="page-hero-overlay" aria-hidden="true"></div>
-    <div class="page-hero-content">
-      <span class="eyebrow">Let's Talk</span>
-      <h1>Get in <em>Touch</em></h1>
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoTitle">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="demoClose" aria-label="Close modal">&#215;</button>
+      <p class="demo-modal-eyebrow">Demo Notice</p>
+      <h3 id="demoTitle">Booking Unavailable</h3>
+      <p>This is a demo for display purposes.<br>Built by <strong>Dyson Digital</strong>.</p>
+      <button class="btn btn-primary demo-confirm" id="demoConfirm">Got It</button>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero section reveal">
+    <div class="container">
+      <p class="eyebrow">We'd Love to Hear from You</p>
+      <h1>Get in Touch</h1>
+      <p class="page-hero-sub">Whether you're booking for the first time, have a question about a service, or just want to say hello — we're here.</p>
     </div>
   </section>
 
-  <!-- CONTACT SECTION -->
-  <section class="contact-section" aria-label="Contact form and information">
-    <div class="section-inner">
+  <!-- CONTACT MAIN SECTION -->
+  <section class="section contact-section reveal">
+    <div class="container">
       <div class="contact-grid">
 
-        <!-- LEFT: Info -->
-        <div>
-          <div class="reveal">
-            <span class="eyebrow">We're Here</span>
-            <h2>We'd love to<br><span class="italic-serif">hear from you.</span></h2>
-            <div class="gold-line-left"></div>
-            <p>Whether you have a question about services, want to schedule a consultation, or are enquiring about bridal availability — reach out and we will get back to you within one business day.</p>
+        <!-- LEFT: Contact Info -->
+        <div class="contact-info">
+          <h2>Contact Info</h2>
+          <p class="contact-intro">Our front desk team responds to messages within one business day. For same-day inquiries, please call us directly.</p>
+
+          <div class="contact-info-cards">
+
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              </div>
+              <div>
+                <h4>Visit Us</h4>
+                <p>417 S. Main Street<br>Ann Arbor, MI 48104</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6 6l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>Call Us</h4>
+                <p><a href="tel:+17345550182" class="contact-link">(734) 555-0182</a></p>
+                <p class="contact-sub">Tue–Sun, during salon hours</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:hello@velocosalon.com" class="contact-link">hello@velocosalon.com</a></p>
+                <p class="contact-sub">Replies within 1 business day</p>
+              </div>
+            </div>
+
+            <div class="contact-info-card reveal">
+              <div class="contact-info-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>Hours</h4>
+                <p>Tue–Thu: 10 AM – 7 PM (Thu until 8 PM)</p>
+                <p>Fri: 9 AM – 7 PM</p>
+                <p>Sat: 9 AM – 6 PM</p>
+                <p>Sun: 11 AM – 4 PM</p>
+                <p class="closed-note">Closed Mondays</p>
+              </div>
+            </div>
+
           </div>
-          <div class="contact-info-details">
-            <div class="contact-detail reveal">
-              <div class="contact-detail-icon">&#9776;</div>
-              <div class="contact-detail-text">
-                <span class="eyebrow mb-4">Address</span>
-                <p>412 S. Main Street, Suite 102<br>Ann Arbor, MI 48104</p>
-              </div>
-            </div>
-            <div class="contact-detail reveal">
-              <div class="contact-detail-icon">&#9743;</div>
-              <div class="contact-detail-text">
-                <span class="eyebrow mb-4">Phone</span>
-                <p><a href="tel:+17345550192" class="visit-info-link">(734) 555-0192</a></p>
-              </div>
-            </div>
-            <div class="contact-detail reveal">
-              <div class="contact-detail-icon">&#9993;</div>
-              <div class="contact-detail-text">
-                <span class="eyebrow mb-4">Email</span>
-                <p><a href="mailto:hello@velocosalon.com" class="visit-info-link">hello@velocosalon.com</a></p>
-              </div>
-            </div>
-            <div class="contact-detail reveal">
-              <div class="contact-detail-icon">&#9680;</div>
-              <div class="contact-detail-text">
-                <span class="eyebrow mb-4">Hours</span>
-                <p>Monday: 10am – 6pm<br>Tuesday – Friday: 9am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: Closed</p>
-              </div>
-            </div>
-          </div>
-          <div class="mt-44 reveal">
-            <span class="eyebrow">Follow Along</span>
-            <div class="contact-social-row">
-              <a href="#" class="btn btn-outline contact-social-btn demo-trigger">Instagram</a>
-              <a href="#" class="btn btn-outline contact-social-btn demo-trigger">Facebook</a>
-              <a href="#" class="btn btn-outline contact-social-btn demo-trigger">TikTok</a>
+
+          <!-- Social Links -->
+          <div class="contact-social">
+            <p class="contact-social-label">Follow Our Work</p>
+            <div class="contact-social-links">
+              <a href="#" class="contact-social-btn demo-trigger" aria-label="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                Instagram
+              </a>
+              <a href="#" class="contact-social-btn demo-trigger" aria-label="Facebook">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                Facebook
+              </a>
             </div>
           </div>
         </div>
 
-        <!-- RIGHT: Form -->
-        <div class="contact-form reveal-right">
-          <span class="eyebrow">Send a Message</span>
-          <h3 class="contact-form-title">Inquiry Form</h3>
-          <div class="form-row">
-            <div class="form-group"><label for="firstName">First Name</label><input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name"></div>
-            <div class="form-group"><label for="lastName">Last Name</label><input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name"></div>
+        <!-- RIGHT: Booking Form -->
+        <div class="contact-form-wrap reveal">
+          <div class="contact-form-card">
+            <h2>Book an Appointment</h2>
+            <p class="contact-form-sub">Fill out the form below and we'll get back to you within one business day to confirm your appointment.</p>
+
+            <div class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="(734) 555-0000" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="stylist">Preferred Stylist</label>
+                <select id="stylist" name="stylist">
+                  <option value="">No preference — surprise me</option>
+                  <option value="marcus">Marcus (Founder · Color)</option>
+                  <option value="nia">Nia (Curls &amp; Texture)</option>
+                  <option value="elena">Elena (Color Specialist)</option>
+                  <option value="kassa">Kassa (Style Director)</option>
+                  <option value="julian">Julian (Barber)</option>
+                  <option value="chloe">Chloe (Vivid Color)</option>
+                  <option value="david">David (Men's Grooming)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="service">Service Interested In <span aria-hidden="true">*</span></label>
+                <select id="service" name="service" required>
+                  <option value="">Select a service…</option>
+                  <optgroup label="Cuts &amp; Styling">
+                    <option>Signature Haircut</option>
+                    <option>Express Trim</option>
+                    <option>Blowout &amp; Style</option>
+                    <option>Special Occasion Updo</option>
+                  </optgroup>
+                  <optgroup label="Color &amp; Highlights">
+                    <option>Full Color</option>
+                    <option>Balayage / Ombré</option>
+                    <option>Highlights</option>
+                    <option>Color Correction</option>
+                    <option>Gloss &amp; Toning</option>
+                  </optgroup>
+                  <optgroup label="Texture &amp; Curl">
+                    <option>Curl Definition Treatment</option>
+                    <option>Keratin Smoothing</option>
+                    <option>Protective Styling</option>
+                    <option>Loc Maintenance</option>
+                  </optgroup>
+                  <optgroup label="Men's Grooming">
+                    <option>Men's Cut &amp; Style</option>
+                    <option>Fade &amp; Taper</option>
+                    <option>Beard Trim &amp; Shape</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Anything Else We Should Know?</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your hair goals, any concerns, or what you're hoping to achieve…"></textarea>
+              </div>
+
+              <button type="button" class="btn btn-primary form-submit demo-trigger" id="formSubmit">
+                Send Request
+              </button>
+
+              <p class="form-disclaimer">By submitting, you agree to be contacted about your appointment. We never share your information.</p>
+            </div>
           </div>
-          <div class="form-row">
-            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="jane@email.com" autocomplete="email"></div>
-            <div class="form-group"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone" placeholder="(734) 555-0000" autocomplete="tel"></div>
-          </div>
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="service">
-              <option value="" disabled selected>Select a service...</option>
-              <option value="cut">Haircut &amp; Styling</option>
-              <option value="color">Color Services</option>
-              <option value="mens">Men's Grooming</option>
-              <option value="treatments">Treatments</option>
-              <option value="bridal">Bridal &amp; Events</option>
-              <option value="extensions">Extensions</option>
-              <option value="careers">Career Inquiry</option>
-              <option value="other">Other / General Question</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="stylist">Preferred Stylist (optional)</label>
-            <select id="stylist" name="stylist">
-              <option value="" disabled selected>No preference / Any stylist</option>
-              <option>Marcus</option><option>Nia</option><option>Elena</option>
-              <option>Kassa</option><option>Julian</option><option>Chloe</option><option>David</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Tell us a little about what you're looking for, any questions you have, or anything else we should know..."></textarea>
-          </div>
-          <button type="button" class="btn btn-primary contact-submit-btn demo-trigger">Send Inquiry</button>
-          <p class="contact-form-note">We typically respond within one business day. For urgent requests, please call us directly.</p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- INTERIOR IMAGE STRIP -->
-  <div class="contact-img-strip" aria-hidden="true">
-    <img src="images/velo-hair-co-interior-styling-station.jpg" alt="" class="contact-inline-img" loading="lazy">
-  </div>
-
-  <!-- CTA BAND -->
-  <section class="cta-band" aria-label="Book online">
-    <div class="container reveal">
-      <span class="eyebrow">Or Skip the Form</span>
-      <h2>Book directly<br><span class="italic-serif">online.</span></h2>
-      <div class="gold-line"></div>
-      <p>Our online booking tool lets you pick your stylist, service, and preferred time — available 24/7.</p>
-      <div class="hero-btns-center">
-        <a href="#" class="btn btn-primary demo-trigger">Book Online Now</a>
-        <a href="services.html" class="btn btn-outline">Browse Services</a>
+  <!-- FAQ STRIP -->
+  <section class="section contact-faq-section reveal" style="background:#f9f8f5;">
+    <div class="container">
+      <p class="eyebrow" style="text-align:center;">Common Questions</p>
+      <h2 style="text-align:center; margin-bottom:3rem;">FAQs</h2>
+      <div class="faq-grid">
+        <div class="faq-item reveal">
+          <h4>Do I need an appointment?</h4>
+          <p>Yes — we are appointment-only. This ensures every client gets our full attention. Same-day appointments are sometimes available; call us to check.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>What's your cancellation policy?</h4>
+          <p>We ask for at least 24 hours notice for cancellations or rescheduling. Late cancellations may be subject to a fee equal to 50% of the service cost.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>Do you offer consultations?</h4>
+          <p>Absolutely. First-time clients receive a complimentary 10-minute consultation before every service. Major transformations (color correction, etc.) may require a paid standalone consultation.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>What payment methods do you accept?</h4>
+          <p>We accept all major credit and debit cards, Apple Pay, Google Pay, and cash. Gratuity is always appreciated and can be added at checkout.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>Is the salon accessible?</h4>
+          <p>Yes. We have a ground-level entrance with no steps, an accessible restroom, and wide aisles throughout. Please call ahead if you have any specific needs.</p>
+        </div>
+        <div class="faq-item reveal">
+          <h4>Do you work with all hair types?</h4>
+          <p>Yes — all hair types, textures, and lengths. Our team is trained in Type 1 through Type 4 hair, and we celebrate every texture that walks through our door.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-footer">Velo Co.</span><p>A boutique hair studio in the heart of Ann Arbor. Precision, artistry, and genuine care — every single visit.</p></div>
-      <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="story.html">Our Story</a><a href="team.html">Team</a></div>
-      <div class="footer-col"><h5>Visit</h5><a href="visit.html">Directions</a><a href="contact.html">Contact</a><a href="#" class="demo-trigger">Book Online</a><a href="visit.html">Hours</a></div>
-      <div class="footer-col"><h5>Hours</h5><a href="#">Mon – Fri: 9am – 7pm</a><a href="#">Saturday: 9am – 6pm</a><a href="#">Sunday: Closed</a><a href="tel:+17345550192">(734) 555-0192</a></div>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-velo">Velo</span><span class="logo-co"> Co.</span>
+        <p>Ann Arbor's premier destination for intentional hair care.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="story.html">Our Story</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="visit.html">Visit</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>417 S. Main Street<br>Ann Arbor, MI 48104</p>
+        <p>(734) 555-0182</p>
+        <p>hello@velocosalon.com</p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2025 Velo Co. Salon. All rights reserved.</p>
-      <p>Portfolio demo. Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a>.</p>
+      <p>&copy; 2025 Velo Co. Salon. Website by <a href="https://dysondigital.com" target="_blank" rel="noopener">Dyson Digital</a>.</p>
     </div>
   </footer>
 
-  <div class="demo-modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-label="Demo notice">
-    <div class="demo-modal">
-      <button class="demo-modal-close" id="demoModalClose" aria-label="Close modal">&#x2715;</button>
-      <div class="modal-logo">Velo Co.</div><div class="modal-line"></div>
-      <h3>This is a Demo Site</h3>
-      <p>This website is a portfolio demonstration and display piece only. No appointments can be scheduled, no purchases can be made, and no forms are active.</p>
-      <p class="modal-builder">Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></p>
-      <button class="btn modal-dismiss" id="modalDismiss">Got It</button>
-    </div>
-  </div>
-
   <script>
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 60); });
-    const hamburger = document.getElementById('hamburger'), mobileMenu = document.getElementById('mobileMenu'), mobileClose = document.getElementById('mobileClose');
-    function openMenu() { mobileMenu.classList.add('open'); hamburger.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
-    function closeMenu() { mobileMenu.classList.remove('open'); hamburger.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
-    hamburger.addEventListener('click', () => mobileMenu.classList.contains('open') ? closeMenu() : openMenu());
-    mobileClose.addEventListener('click', closeMenu);
-    mobileMenu.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+    // Demo Modal
+    const demoTriggers = document.querySelectorAll('.demo-trigger');
     const demoModal = document.getElementById('demoModal');
-    document.querySelectorAll('.demo-trigger').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); demoModal.classList.add('active'); document.body.style.overflow='hidden'; }));
-    function closeModal() { demoModal.classList.remove('active'); document.body.style.overflow=''; }
-    document.getElementById('demoModalClose').addEventListener('click', closeModal);
-    document.getElementById('modalDismiss').addEventListener('click', closeModal);
-    demoModal.addEventListener('click', (e) => { if (e.target === demoModal) closeModal(); });
-    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
-    revealEls.forEach(el => obs.observe(el));
+    const demoClose = document.getElementById('demoClose');
+    const demoConfirm = document.getElementById('demoConfirm');
+    demoTriggers.forEach(btn => btn.addEventListener('click', () => demoModal.classList.add('active')));
+    [demoClose, demoConfirm].forEach(el => el.addEventListener('click', () => demoModal.classList.remove('active')));
+    demoModal.addEventListener('click', e => { if (e.target === demoModal) demoModal.classList.remove('active'); });
+
+    // Mobile Menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileClose = document.getElementById('mobileClose');
+    function openMenu() { mobileMenu.classList.add('active'); mobileOverlay.classList.add('active'); mobileClose.classList.add('visible'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active'); mobileClose.classList.remove('visible'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    hamburger.addEventListener('click', openMenu);
+    mobileClose.addEventListener('click', closeMenu);
+    mobileOverlay.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { demoModal.classList.remove('active'); closeMenu(); }
+    });
+
+    // Scroll Reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
