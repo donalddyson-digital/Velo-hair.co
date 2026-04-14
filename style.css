@@ -1968,3 +1968,62 @@ img {
   object-fit: cover;
 }
 
+/* --- BOUTIQUE HERO REPAIR PATCH --- */
+.hero-boutique {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--charcoal);
+    overflow: hidden;
+}
+
+.hero-bg-wrap {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5; /* Dims the background to make text pop */
+}
+
+.hero-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(30,30,27,0.9) 20%, transparent 100%);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 10;
+}
+
+.hero-text-content h1 em {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--gold);
+}
+
+/* THE FLOATING PNG LOGIC */
+.floating-stylist-png {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    height: 85vh; /* Makes the stylist look like they are standing in the room */
+    z-index: 5;
+    filter: drop-shadow(-20px 0 50px rgba(0,0,0,0.5)); /* Adds 3D depth */
+    pointer-events: none;
+}
+
+/* Mobile Fix for Floating PNG */
+@media (max-width: 960px) {
+    .floating-stylist-png {
+        height: 50vh;
+        right: -10%;
+        opacity: 0.6; /* Lightens it so it doesn't cover text on small screens */
+    }
+}
