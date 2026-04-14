@@ -1939,3 +1939,32 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* === REPAIR PATCH: NAVIGATION VISIBILITY === */
+.navbar {
+  background: #ffffff !important; /* Forces solid white */
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.hamburger span {
+  background: #1e1e1b !important; /* Forces high-contrast black for the icon */
+  height: 2px; /* Thicker lines for visibility */
+}
+
+/* === REPAIR PATCH: MOBILE TEXT CONTRAST === */
+.mobile-menu {
+  background: #ffffff !important;
+  padding-top: 80px;
+}
+
+.mobile-nav-links a {
+  color: #1e1e1b !important; /* Deep charcoal for mobile links */
+  font-weight: 700 !important; /* Bold for mobile readability */
+  border-bottom: 2px solid #f0f0f0; /* Darker borders */
+}
+
+/* === IMAGE FIX: FORCE OBJECT FIT === */
+img {
+  background-color: #f0f0f0; /* Shows a grey box instead of a "broken" icon if path fails */
+  object-fit: cover;
+}
+
