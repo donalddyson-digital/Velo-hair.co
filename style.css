@@ -2682,3 +2682,43 @@ h5 { font-size: 1.1rem; font-weight: 500; }
   }
 }
 
+/* ── THE SURGICAL FLOATING FIX ── */
+
+/* 1. Restores the Layered Look while killing the Gaps */
+.experience-images, 
+.story-floating-imgs {
+  position: relative !important;
+  height: 420px !important; /* The "Sweet Spot" height for the overlap */
+  min-height: 420px !important;
+  display: block !important;
+  margin-bottom: 40px;
+}
+
+/* 2. Positions the images so they "Float" again */
+.exp-img-main, .story-float-a {
+  position: absolute !important;
+  width: 70% !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1;
+  box-shadow: 20px 30px 60px rgba(30,30,27,0.15);
+}
+
+.exp-img-float, .story-float-b {
+  position: absolute !important;
+  width: 55% !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 2;
+  box-shadow: -10px 20px 50px rgba(30,30,27,0.12);
+}
+
+/* 3. Mobile Logic: Keep a slight overlap but reduce the container height */
+@media (max-width: 700px) {
+  .experience-images, .story-floating-imgs {
+    height: 320px !important; /* Smaller box for mobile screens */
+    min-height: 320px !important;
+    margin-top: 20px;
+  }
+}
+
