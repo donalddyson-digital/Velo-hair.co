@@ -1265,3 +1265,9 @@ footer {
     letter-spacing: 0.2em;
 }
 
+.boutique-floats {
+    height: auto !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
