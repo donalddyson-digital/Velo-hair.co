@@ -535,11 +535,6 @@ h5 { font-size: 1.1rem; font-weight: 500; }
   align-items: center;
 }
 
-.experience-images {
-  position: relative;
-  height: 580px;
-}
-
 .exp-img-main {
   position: absolute;
   width: 72%;
@@ -989,10 +984,6 @@ h5 { font-size: 1.1rem; font-weight: 500; }
   padding: var(--section-pad) 0;
 }
 
-.story-floating-imgs {
-  position: relative;
-  height: 480px;
-}
 
 .story-float-a {
   position: absolute;
@@ -2639,5 +2630,55 @@ h5 { font-size: 1.1rem; font-weight: 500; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* ═══════════════════════════════════════════════
+   THE "ZERO GAP" EMERGENCY OVERRIDE
+   This fixes Desktop AND Mobile in one go.
+   ═══════════════════════════════════════════════ */
+
+/* 1. CRUSHES THE PNG GAPS */
+.experience-images, 
+.story-floating-imgs {
+  height: auto !important;
+  min-height: 10px !important; /* Forces the container to shrink to the photo size */
+  max-height: none !important;
+  margin-bottom: 20px !important;
+  display: block !important;
+}
+
+/* 2. FIXES THE "OUR VALUES" INDENTATION & GAPS */
+.story-values {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  align-items: start !important;
+  gap: 30px !important;
+  padding: 40px 0 !important;
+  width: 100% !important;
+}
+
+/* 3. ENSURES IMAGES DON'T PUSH CONTENT AWAY */
+.exp-img-main, .exp-img-float, .story-float-a, .story-float-b {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  height: auto !important;
+  margin-bottom: 10px !important;
+}
+
+/* 4. MOBILE-SPECIFIC FORCE (The "Media Section" you couldn't find) */
+@media (max-width: 900px) {
+  .experience-grid, .story-floating-row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important; /* Removes the gap between text and images */
+  }
+  
+  .experience-images, .story-floating-imgs {
+    order: 2 !important; /* Puts images below text for better mobile flow */
+  }
 }
 
