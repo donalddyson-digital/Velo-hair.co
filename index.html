@@ -10,10 +10,10 @@
 <body>
 
     <nav class="navbar">
-        <div class="nav-container">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; height: 100%;">
             <a href="index.html" class="nav-logo">Velo Co. <span>Salon</span></a>
             
-            <div class="nav-right">
+            <div class="nav-right" style="display: flex; align-items: center; gap: 2rem; margin-left: auto;">
                 <ul class="nav-links">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="services.html">Services</a></li>
@@ -43,13 +43,15 @@
     <section class="hero">
         <div class="hero-bg" style="background-image: url('images/velo-hair-co-ann-arbor-storefront.jpg');"></div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
-            <span class="section-label">Ann Arbor, Michigan</span>
-            <h1>Where <em>craft</em> meets intention.</h1>
-            <p>A boutique hair studio dedicated to precision, artistry, and the kind of experience you look forward to every time.</p>
-            <div class="hero-cta">
-                <button class="btn btn-gold demo-trigger">Book Your Visit</button>
-                <a href="services.html" class="btn btn-outline-white">View Services</a>
+        <div class="container">
+            <div class="hero-content">
+                <span class="section-label">Ann Arbor, Michigan</span>
+                <h1>Where <em>craft</em> meets intention.</h1>
+                <p>A boutique hair studio dedicated to precision, artistry, and the kind of experience you look forward to every time.</p>
+                <div class="hero-cta">
+                    <button class="btn btn-gold demo-trigger">Book Your Visit</button>
+                    <a href="services.html" class="btn btn-outline-white">View Services</a>
+                </div>
             </div>
         </div>
     </section>
@@ -66,6 +68,7 @@
             <div class="boutique-floats">
                 <img src="images/velo-experience-stylist-care.png" class="float-img float-img--1" alt="Stylist Care">
                 <img src="images/velo-experience-shampoo-bowl.png" class="float-img float-img--2" alt="Relaxation">
+                <img src="images/velo-experience-lounge-wait.PNG" class="float-img float-img--3" alt="Waiting Area">
             </div>
         </div>
     </section>
@@ -75,7 +78,7 @@
             <div class="text-center">
                 <span class="section-label">The Talent</span>
                 <h2>Meet the Artists</h2>
-                <span class="gold-line mx-auto"></span>
+                <span class="gold-line mx-auto" style="margin: 1rem auto 3rem;"></span>
             </div>
             <div class="team-grid">
                 <div class="team-card">
@@ -96,39 +99,75 @@
                         <span>Senior Stylist</span>
                     </div>
                 </div>
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="images/velo-team-elena-colorist.jpg" alt="Elena">
+                    </div>
+                    <div class="team-info">
+                        <h4>Elena</h4>
+                        <span>Color Specialist</span>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="images/velo-team-kassa-texture.jpg" alt="Kassa">
+                    </div>
+                    <div class="team-info">
+                        <h4>Kassa</h4>
+                        <span>Texture Expert</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <span class="nav-logo" style="color:#fff">Velo Co. <span>Salon</span></span>
+                    <p>Where artistry, texture, and intention meet in Ann Arbor.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Navigate</h5>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="team.html">Team</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Velo Co. Salon. Demo build.</p>
+                <p>Built by <a href="https://dysondigital.com" target="_blank">Dyson Digital</a></p>
+            </div>
+        </div>
+    </footer>
 
     <div class="modal-overlay" id="demoModal">
         <div class="modal-box">
             <button class="modal-close" id="closeModal">✕</button>
             <h3>Book Your Visit</h3>
-            <p>This is a demo site for display purposes only. No appointments will be scheduled.</p>
-            <p><strong>Built by Dyson Digital</strong></p>
+            <p>This is a demo site for display purposes only. Built by Dyson Digital.</p>
             <button class="btn btn-gold" id="confirmModal">Got It</button>
         </div>
     </div>
 
     <script>
-        // MOBILE MENU LOGIC
+        // Menu Logic
         const ham = document.getElementById('hamburger');
         const menu = document.getElementById('mobileMenu');
-        
         ham.addEventListener('click', () => {
             ham.classList.toggle('open');
             menu.classList.toggle('open');
         });
 
-        // MODAL LOGIC
+        // Modal Logic
         const modal = document.getElementById('demoModal');
         const triggers = document.querySelectorAll('.demo-trigger');
-        const close = document.getElementById('closeModal');
-        const confirm = document.getElementById('confirmModal');
-
         triggers.forEach(t => t.addEventListener('click', () => modal.classList.add('open')));
-        close.addEventListener('click', () => modal.classList.remove('open'));
-        confirm.addEventListener('click', () => modal.classList.remove('open'));
+        document.getElementById('closeModal').onclick = () => modal.classList.remove('open');
+        document.getElementById('confirmModal').onclick = () => modal.classList.remove('open');
     </script>
 </body>
 </html>
