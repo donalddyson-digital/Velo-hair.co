@@ -173,6 +173,24 @@
         triggers.forEach(t => t.addEventListener('click', () => modal.classList.add('open')));
         document.getElementById('closeModal').onclick = () => modal.classList.remove('open');
         document.getElementById('confirmModal').onclick = () => modal.classList.remove('open');
-    </script>
+   /* --- BOUTIQUE PARALLAX EFFECT --- */
+window.addEventListener('scroll', () => {
+    const scrollPos = window.pageYOffset;
+    
+    // Move the Top Accent Image Up slightly
+    const topImg = document.querySelector('.float-accent-top');
+    if(topImg) {
+        topImg.style.transform = `translateY(${scrollPos * -0.05}px) rotate(4deg)`;
+    }
+    
+    // Move the Bottom Accent Image Down slightly
+    const botImg = document.querySelector('.float-accent-bottom');
+    if(botImg) {
+        botImg.style.transform = `translateY(${scrollPos * 0.03}px) rotate(-3deg)`;
+    }
+});
+
+</script>
+
 </body>
 </html>
