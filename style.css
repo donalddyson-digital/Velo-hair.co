@@ -1162,69 +1162,53 @@ footer {
     filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
 }
 
-/* --- BOUTIQUE REPAIR PATCH --- */
-
-/* 1. Stop the 'Wide' Mobile issue */
-.boutique {
-    overflow: hidden; /* This chops off any image parts that go off-screen */
-    position: relative;
-}
-
-/* 2. Fix the 'Stationary' Image - Add a transition so the script can move it */
-.float-main {
-    transition: transform 0.1s linear;
-    z-index: 2;
-}
-
-/* 3. Mobile Safety - Scale down the art so it doesn't crowd the text */
-@media (max-width: 768px) {
-    .boutique-floats {
-        height: 320px; /* Shorter for phones */
-        margin-top: 2rem;
-    }
-    .float-main { width: 75%; left: 5%; }
-    .float-accent-top { width: 45%; right: 2%; }
-    .float-accent-bottom { display: none; } /* Remove the 3rd image on tiny screens to prevent clutter */
-}
-
-/* --- BOUTIQUE GALLERY SHIFT (STABLE JPEGS) --- */
+/* --- BOUTIQUE CLEAN SLATE FIX --- */
 .boutique-floats {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    position: relative;
-    padding: 20px 0;
-    margin-top: 40px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    position: relative !important;
+    height: auto !important; /* This removes the huge empty gap */
+    padding: 40px 0 !important;
+    margin-top: 20px !important;
 }
 
-.float-img {
-    position: relative !important; 
+.float-img, 
+.float-main, 
+.float-accent-top, 
+.float-accent-bottom {
+    position: relative !important;
     width: 100% !important;
-    height: auto;
+    height: auto !important;
     left: auto !important;
     top: auto !important;
     right: auto !important;
     bottom: auto !important;
     transform: none !important;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+    filter: none !important;
 }
 
-/* This creates the staggered 'boutique' look */
-.float-img:nth-child(2) {
-    margin-top: 80px;
+/* Add the staggered effect back safely */
+.float-img:nth-child(2), 
+.float-accent-top {
+    margin-top: 40px !important;
 }
 
-.float-img:nth-child(3) {
-    margin-top: -40px;
-}
-
-.float-img:hover {
-    transform: translateY(-10px) !important;
-    transition: transform 0.3s ease;
-}
-
+/* Hide the thin gold lines that are floating randomly */
 .boutique-graphic-box {
-    display: none;
+    display: none !important;
 }
 
+/* Mobile: Stack them into one column so they are big and clear */
+@media (max-width: 600px) {
+    .boutique-floats {
+        grid-template-columns: 1fr !important;
+    }
+    .float-img:nth-child(2), 
+    .float-accent-top {
+        margin-top: 0 !important;
+    }
+}
