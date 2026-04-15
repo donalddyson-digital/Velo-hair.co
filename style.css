@@ -2555,3 +2555,30 @@ h5 { font-size: 1.1rem; font-weight: 500; }
 /* Contact page extra utilities */
 .mb-40 { margin-bottom: 40px; }
 .text-muted-sm.mb-40 { margin-bottom: 40px; }
+
+/* Ensure the mobile menu is above EVERYTHING */
+.nav-mobile {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: var(--charcoal);
+  z-index: 9999; /* Higher than the navbar */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+/* Ensure the Close Button is visible and clickable */
+.nav-mobile-close {
+  position: absolute;
+  top: 30px; 
+  right: 40px;
+  font-size: 3rem; /* Make it nice and large for thumbs */
+  color: var(--cream);
+  cursor: pointer;
+  background: none;
+  border: none;
+  z-index: 10000; /* Must be higher than nav-mobile */
+  line-height: 1;
+}
