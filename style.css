@@ -1187,3 +1187,44 @@ footer {
     .float-accent-bottom { display: none; } /* Remove the 3rd image on tiny screens to prevent clutter */
 }
 
+/* --- BOUTIQUE GALLERY SHIFT (STABLE JPEGS) --- */
+.boutique-floats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    position: relative;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.float-img {
+    position: relative !important; 
+    width: 100% !important;
+    height: auto;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* This creates the staggered 'boutique' look */
+.float-img:nth-child(2) {
+    margin-top: 80px;
+}
+
+.float-img:nth-child(3) {
+    margin-top: -40px;
+}
+
+.float-img:hover {
+    transform: translateY(-10px) !important;
+    transition: transform 0.3s ease;
+}
+
+.boutique-graphic-box {
+    display: none;
+}
+
