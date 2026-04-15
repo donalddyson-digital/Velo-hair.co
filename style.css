@@ -1048,3 +1048,75 @@ footer {
   .navbar, footer, .modal-overlay { display: none !important; }
   section { padding-top: 40px !important; }
 }
+
+/* --- BOUTIQUE FLOATING GRAPHICS (Sparrow Style) --- */
+
+.boutique-floats {
+    position: relative;
+    height: 600px; /* Forces the section to hold space for the art */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.float-img {
+    position: absolute;
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.15));
+    transition: transform 0.5s ease;
+    border-radius: 4px;
+}
+
+/* The big central photo */
+.float-main {
+    width: 65%;
+    z-index: 2;
+    left: 10%;
+    top: 10%;
+}
+
+/* The one peeking over the top */
+.float-accent-top {
+    width: 45%;
+    z-index: 3;
+    right: 0;
+    top: -5%;
+    transform: rotate(4deg);
+}
+
+/* The one overlapping the bottom */
+.float-accent-bottom {
+    width: 40%;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    transform: rotate(-3deg);
+}
+
+/* The Gold Decorative Box (Just like Sparrow) */
+.boutique-graphic-box {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    border: 2px solid var(--gold);
+    right: 15%;
+    bottom: 15%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.float-img:hover {
+    transform: scale(1.05) translateY(-10px);
+    z-index: 10;
+}
+
+/* Mobile Fix: Stack them so they don't overlap text */
+@media (max-width: 960px) {
+    .boutique-floats {
+        height: 400px;
+        margin-top: 3rem;
+    }
+    .float-main { width: 80%; left: 0; }
+    .float-accent-top { width: 50%; }
+    .float-accent-bottom { display: none; } /* Hide the 3rd on mobile to keep it clean */
+}
+
