@@ -1162,3 +1162,28 @@ footer {
     filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
 }
 
+/* --- BOUTIQUE REPAIR PATCH --- */
+
+/* 1. Stop the 'Wide' Mobile issue */
+.boutique {
+    overflow: hidden; /* This chops off any image parts that go off-screen */
+    position: relative;
+}
+
+/* 2. Fix the 'Stationary' Image - Add a transition so the script can move it */
+.float-main {
+    transition: transform 0.1s linear;
+    z-index: 2;
+}
+
+/* 3. Mobile Safety - Scale down the art so it doesn't crowd the text */
+@media (max-width: 768px) {
+    .boutique-floats {
+        height: 320px; /* Shorter for phones */
+        margin-top: 2rem;
+    }
+    .float-main { width: 75%; left: 5%; }
+    .float-accent-top { width: 45%; right: 2%; }
+    .float-accent-bottom { display: none; } /* Remove the 3rd image on tiny screens to prevent clutter */
+}
+
