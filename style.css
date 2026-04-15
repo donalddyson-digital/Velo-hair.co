@@ -1120,3 +1120,45 @@ footer {
     .float-accent-bottom { display: none; } /* Hide the 3rd on mobile to keep it clean */
 }
 
+/* --- SPREAD THE ART PIECES --- */
+
+.boutique-floats {
+    position: relative;
+    height: 650px; /* Increased height for better breathing room */
+}
+
+/* Big Central Photo - Push it slightly left */
+.float-main {
+    width: 60%;
+    z-index: 2;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%); /* Centers it vertically */
+}
+
+/* Top Accent - Moves more to the right */
+.float-accent-top {
+    width: 48%;
+    z-index: 3;
+    right: -10px; /* Overhangs the container slightly */
+    top: 5%;
+    /* Transition added for the scroll script smoothness */
+    transition: transform 0.1s linear; 
+}
+
+/* Bottom Accent - Moves deeper into the corner */
+.float-accent-bottom {
+    width: 42%;
+    z-index: 1;
+    left: -20px;
+    bottom: 5%;
+    transition: transform 0.1s linear;
+}
+
+/* THE "SPARROW" POLISH: Hover state */
+.float-img:hover {
+    z-index: 100 !important; /* Brings the hovered image to the front */
+    transform: scale(1.08) !important;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.3));
+}
+
