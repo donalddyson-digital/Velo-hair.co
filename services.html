@@ -3,443 +3,375 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Velo Co. Salon services — cuts, color, texture, and men's grooming in Ann Arbor, MI.">
-  <title>Services — Velo Co. Salon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Services — Velo Hair Co</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Services page float container */
-    .float-zone-wrap {
-      position: relative;
-    }
-    @media (min-width: 961px) {
-      .float-zone-inner {
-        padding-right: 0;
-      }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ── NAVBAR ── -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo" aria-label="Velo Co. Salon Home">Velo Co. <span>Salon</span></a>
-      <ul class="nav-links" role="list">
+  <!-- NAV -->
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="story.html">Our Story</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-book demo-trigger" aria-label="Book appointment">Book Now</button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-book-btn book-trigger">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
-    <nav class="mobile-nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="story.html">Our Story</a>
-      <a href="team.html">Team</a>
-      <a href="visit.html">Visit</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="mobile-menu-book">
-      <button class="btn btn-primary demo-trigger" style="width:100%">Book Your Visit</button>
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileClose">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="story.html">Our Story</a>
+    <a href="team.html">Team</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/velo-craft-precision-shear-cut.jpg" alt="Precision shear cut">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <span class="overline">What We Offer</span>
+        <h1>Services</h1>
+      </div>
     </div>
   </div>
-  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
 
-
-  <!-- ── PAGE HERO ── -->
-  <header class="page-hero">
+  <!-- SIGNATURE BADGE + INTRO -->
+  <section class="section-pad bg-off-white">
     <div class="container">
-      <span class="section-label">The Velo Menu</span>
-      <h1 class="reveal">Services &amp;<br>Pricing</h1>
-      <div class="gold-divider" aria-hidden="true"></div>
-      <p class="reveal">Every service is crafted with care and calibrated for you. Pricing reflects the artistry, time, and intention behind each appointment.</p>
-      <div style="margin-top:2rem">
-        <button class="btn btn-primary demo-trigger reveal">Book a Service</button>
+      <div class="text-center reveal mb-56">
+        <div class="signature-badge">
+          ✦ Signature Cut Starting at $85+ — The Velo Standard ✦
+        </div>
+        <span class="overline">Our Menu</span>
+        <h2>Crafted for every hair story</h2>
+        <div class="divider divider-center"></div>
+        <p class="services-intro-p">
+          Every service at Velo begins with a thorough consultation. Our artists listen deeply before they ever pick up a tool — because the best work starts with understanding.
+        </p>
+      </div>
+
+      <!-- SERVICES GRID -->
+      <div class="services-categories">
+
+        <!-- CUTS -->
+        <div class="service-category reveal">
+          <span class="service-category-sub">Category One</span>
+          <h3 class="service-category-title">Cuts</h3>
+          <div class="service-list">
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Signature Cut</div>
+                <div class="service-item-desc">Consultation, wash, precision cut &amp; style</div>
+              </div>
+              <span class="service-item-price">$85+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Women's Haircut</div>
+                <div class="service-item-desc">Cut &amp; blowout</div>
+              </div>
+              <span class="service-item-price">$70+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Men's Haircut</div>
+                <div class="service-item-desc">Cut, style &amp; finish</div>
+              </div>
+              <span class="service-item-price">$45+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Bang Trim</div>
+                <div class="service-item-desc">Quick precision fringe shaping</div>
+              </div>
+              <span class="service-item-price">$20</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Razor Cut</div>
+                <div class="service-item-desc">Effortless texture &amp; movement</div>
+              </div>
+              <span class="service-item-price">$90+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Kids' Cut (12 &amp; under)</div>
+                <div class="service-item-desc">Patient, gentle &amp; fun</div>
+              </div>
+              <span class="service-item-price">$35+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Blowout</div>
+                <div class="service-item-desc">Wash &amp; professional blowdry</div>
+              </div>
+              <span class="service-item-price">$55+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLOR -->
+        <div class="service-category reveal reveal-delay-1">
+          <span class="service-category-sub">Category Two</span>
+          <h3 class="service-category-title">Color</h3>
+          <div class="service-list">
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Full Balayage</div>
+                <div class="service-item-desc">Hand-painted dimensional color</div>
+              </div>
+              <span class="service-item-price">$185+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Partial Balayage</div>
+                <div class="service-item-desc">Face-framing &amp; crown panels</div>
+              </div>
+              <span class="service-item-price">$130+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Full Foil Highlights</div>
+                <div class="service-item-desc">All-over brightness &amp; depth</div>
+              </div>
+              <span class="service-item-price">$160+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Partial Highlights</div>
+                <div class="service-item-desc">Targeted luminosity</div>
+              </div>
+              <span class="service-item-price">$110+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Single Process Color</div>
+                <div class="service-item-desc">Root-to-tip coverage</div>
+              </div>
+              <span class="service-item-price">$90+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Color Correction</div>
+                <div class="service-item-desc">Consultation required</div>
+              </div>
+              <span class="service-item-price">$200+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Gloss &amp; Toning</div>
+                <div class="service-item-desc">Shine &amp; tone refinement</div>
+              </div>
+              <span class="service-item-price">$65+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TEXTURE -->
+        <div class="service-category reveal">
+          <span class="service-category-sub">Category Three</span>
+          <h3 class="service-category-title">Texture</h3>
+          <div class="service-list">
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Curl Definition Cut</div>
+                <div class="service-item-desc">Dry cut specialist method</div>
+              </div>
+              <span class="service-item-price">$95+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Curl Treatment</div>
+                <div class="service-item-desc">Deep hydration &amp; definition</div>
+              </div>
+              <span class="service-item-price">$75+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Keratin Smoothing</div>
+                <div class="service-item-desc">Frizz-free transformation</div>
+              </div>
+              <span class="service-item-price">$250+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Natural Hair Styling</div>
+                <div class="service-item-desc">Twist-out, braid-out &amp; more</div>
+              </div>
+              <span class="service-item-price">$80+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Loc Maintenance</div>
+                <div class="service-item-desc">Retwist, style &amp; moisture</div>
+              </div>
+              <span class="service-item-price">$100+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Protective Styling</div>
+                <div class="service-item-desc">Braids, twists &amp; updos</div>
+              </div>
+              <span class="service-item-price">$90+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Deep Conditioning</div>
+                <div class="service-item-desc">Moisture-intensive treatment</div>
+              </div>
+              <span class="service-item-price">$45+</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROOMING -->
+        <div class="service-category reveal reveal-delay-1">
+          <span class="service-category-sub">Category Four</span>
+          <h3 class="service-category-title">Grooming</h3>
+          <div class="service-list">
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Men's Signature Cut</div>
+                <div class="service-item-desc">Consultation, wash &amp; style</div>
+              </div>
+              <span class="service-item-price">$60+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Fade &amp; Taper</div>
+                <div class="service-item-desc">Crisp fade from skin to length</div>
+              </div>
+              <span class="service-item-price">$55+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Beard Sculpt</div>
+                <div class="service-item-desc">Shape, edge &amp; condition</div>
+              </div>
+              <span class="service-item-price">$40+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Cut &amp; Beard Combo</div>
+                <div class="service-item-desc">Complete grooming package</div>
+              </div>
+              <span class="service-item-price">$85+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Hot Towel Shave</div>
+                <div class="service-item-desc">Classic straight razor experience</div>
+              </div>
+              <span class="service-item-price">$55+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Gray Blending</div>
+                <div class="service-item-desc">Natural-looking coverage</div>
+              </div>
+              <span class="service-item-price">$65+</span>
+            </div>
+            <div class="service-item">
+              <div>
+                <div class="service-item-name">Hair + Scalp Treatment</div>
+                <div class="service-item-desc">Fortifying scalp care</div>
+              </div>
+              <span class="service-item-price">$50+</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- END SERVICES GRID -->
+
+      <p class="reveal text-muted-45">
+        All prices are starting rates. Final pricing determined at consultation. Gratuity not included.
+      </p>
+    </div>
+  </section>
+
+  <!-- COLOR FEATURE -->
+  <div class="color-feature">
+    <div class="container">
+      <div class="color-feature-inner">
+        <div class="color-feat-img reveal-left">
+          <img src="images/velo-action-color-mixing.png" alt="Color mixing in action">
+        </div>
+        <div class="color-feat-text reveal-right">
+          <span class="overline">Color Artistry</span>
+          <h2>Obsessed with tone, dimension &amp; depth</h2>
+          <p>
+            Our colorists are graduates of advanced color programs and are continuously trained in the latest techniques — from lived-in balayage to editorial vivid work. We believe color should feel effortless, not like maintenance.
+          </p>
+          <button class="btn btn-outline book-trigger">Book a Color Consultation →</button>
+        </div>
       </div>
     </div>
-  </header>
+  </div>
 
-
-  <!-- ── SERVICES CONTENT ── -->
-  <section class="section section-cream" aria-label="Service menu">
+  <!-- CRAFT IMAGES STRIP -->
+  <section class="section-pad bg-off-white">
     <div class="container">
-      <div class="float-zone-wrap services-float-zone">
-
-        <!-- ── Floating Experience Cutouts ── -->
-        <img
-          src="images/velo-experience-stylist-care.png"
-          class="exp-float exp-float-r1"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        >
-        <img
-          src="images/velo-experience-shampoo-bowl.png"
-          class="exp-float exp-float-r2"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        >
-        <img
-          src="images/velo-client-mens-grooming.png"
-          class="exp-float exp-float-l1"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        >
-        <img
-          src="images/velo-experience-lounge-wait.png"
-          class="exp-float exp-float-l2"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-        >
-
-        <!-- ── Category 1: Cuts & Styling ── -->
-        <div class="service-category reveal">
-          <div class="service-category-head">
-            <div>
-              <span class="section-label">Category 01</span>
-              <h2>Cuts &amp; Styling</h2>
-            </div>
-            <button class="btn btn-primary demo-trigger">Book a Cut</button>
-          </div>
-          <div class="service-table-wrap">
-            <table class="service-table" aria-label="Cuts and Styling services">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Signature Cut &amp; Style
-                    <div class="service-note">Includes wash, cut, blowout &amp; style</div>
-                  </td>
-                  <td>Our most popular cut — tailored to your face shape, texture, and lifestyle with a full consultation.</td>
-                  <td>75 min</td>
-                  <td>$85+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Precision Cut
-                    <div class="service-note">Wash &amp; cut only</div>
-                  </td>
-                  <td>Clean architectural lines and precise technique for sharp, deliberate silhouettes.</td>
-                  <td>60 min</td>
-                  <td>$65+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Bang Trim
-                    <div class="service-note">Existing clients only</div>
-                  </td>
-                  <td>Quick refresh between appointments. Includes steam and light blowout.</td>
-                  <td>20 min</td>
-                  <td>$20</td>
-                </tr>
-                <tr>
-                  <td>
-                    Bridal &amp; Event Styling
-                    <div class="service-note">Consultation required</div>
-                  </td>
-                  <td>Updo, wave set, editorial styling. Trial run available. Inquire for group bookings.</td>
-                  <td>90–120 min</td>
-                  <td>$150+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Blowout
-                    <div class="service-note">Wash, dry &amp; style</div>
-                  </td>
-                  <td>Smooth, voluminous, or textured finish — your choice. Great for events or just because.</td>
-                  <td>45 min</td>
-                  <td>$55+</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+      <div class="section-header text-center reveal">
+        <span class="overline">The Craft</span>
+        <h2>Every tool, every technique</h2>
+        <div class="divider divider-center"></div>
+      </div>
+      <div class="grid-3-gap2 reveal">
+        <div class="img-hover-zoom">
+          <img src="images/velo-craft-razor-detailing.jpg" alt="Razor detailing craft">
         </div>
-
-        <!-- ── Category 2: Color Services ── -->
-        <div class="service-category reveal">
-          <div class="service-category-head">
-            <div>
-              <span class="section-label">Category 02</span>
-              <h2>Color &amp; Highlights</h2>
-            </div>
-            <button class="btn btn-primary demo-trigger">Book Color</button>
-          </div>
-          <div class="service-table-wrap">
-            <table class="service-table" aria-label="Color and highlights services">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Balayage
-                    <div class="service-note">Hand-painted highlights</div>
-                  </td>
-                  <td>Natural, sun-kissed dimension painted freehand for a seamless, low-maintenance result.</td>
-                  <td>2.5–3 hr</td>
-                  <td>$175+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Full Foil Highlights
-                    <div class="service-note">Fine or full weave</div>
-                  </td>
-                  <td>Maximum brightness and contrast with precision foil placement throughout.</td>
-                  <td>2–2.5 hr</td>
-                  <td>$155+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Partial Highlights
-                    <div class="service-note">Face-frame + crown</div>
-                  </td>
-                  <td>Targeted lightness for a brightening effect around the face and through the crown.</td>
-                  <td>1.5–2 hr</td>
-                  <td>$110+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Single Process Color
-                    <div class="service-note">Root to end coverage</div>
-                  </td>
-                  <td>Full, even color — rich, vibrant, and crafted to complement your skin tone.</td>
-                  <td>1.5 hr</td>
-                  <td>$95+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Vivid / Fantasy Color
-                    <div class="service-note">Consultation required</div>
-                  </td>
-                  <td>Neons, pastels, deep hues. We specialize in bold transformation with lasting results.</td>
-                  <td>3–5 hr</td>
-                  <td>$220+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Gloss / Toner
-                    <div class="service-note">Add-on or standalone</div>
-                  </td>
-                  <td>Neutralize brassiness, refresh fades, or enhance your natural shade with a shine-boosting gloss.</td>
-                  <td>45 min</td>
-                  <td>$55+</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="img-hover-zoom">
+          <img src="images/velo-action-foil-prep.jpg" alt="Foil prep action">
         </div>
-
-        <!-- ── Category 3: Texture & Curl ── -->
-        <div class="service-category reveal">
-          <div class="service-category-head">
-            <div>
-              <span class="section-label">Category 03</span>
-              <h2>Texture &amp; Curl</h2>
-            </div>
-            <button class="btn btn-primary demo-trigger">Book Texture</button>
-          </div>
-          <div class="service-table-wrap">
-            <table class="service-table" aria-label="Texture and curl services">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Curl Cut &amp; Define
-                    <div class="service-note">Type 2C–4C hair</div>
-                  </td>
-                  <td>Dry or wet cutting technique for curly and coily textures. Includes hydration treatment and curl coaching.</td>
-                  <td>90 min</td>
-                  <td>$95+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Natural Hair Care
-                    <div class="service-note">Locs, braids, afros</div>
-                  </td>
-                  <td>Wash, condition, style, and maintenance for natural textures with love and expertise.</td>
-                  <td>60–120 min</td>
-                  <td>$80+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Brazilian Blowout
-                    <div class="service-note">Frizz-free for 10–12 weeks</div>
-                  </td>
-                  <td>Smoothing treatment that eliminates frizz and reduces styling time without altering your natural curl pattern.</td>
-                  <td>2–2.5 hr</td>
-                  <td>$250+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Keratin Smoothing
-                    <div class="service-note">Lasts 3–5 months</div>
-                  </td>
-                  <td>Deep protein infusion that relaxes frizz and creates a smoother, more manageable texture.</td>
-                  <td>3 hr</td>
-                  <td>$280+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Deep Conditioning Treatment
-                    <div class="service-note">Add-on or standalone</div>
-                  </td>
-                  <td>Targeted moisture and protein therapy for damaged, over-processed, or thirsty strands.</td>
-                  <td>30–45 min</td>
-                  <td>$45+</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="img-hover-zoom">
+          <img src="images/velo-craft-fringe-shaping.jpg" alt="Fringe shaping">
         </div>
-
-        <!-- ── Category 4: Men's Grooming ── -->
-        <div class="service-category reveal">
-          <div class="service-category-head">
-            <div>
-              <span class="section-label">Category 04</span>
-              <h2>Men's Grooming</h2>
-            </div>
-            <button class="btn btn-primary demo-trigger">Book Grooming</button>
-          </div>
-          <div class="service-table-wrap">
-            <table class="service-table" aria-label="Men's grooming services">
-              <thead>
-                <tr>
-                  <th scope="col">Service</th>
-                  <th scope="col">Description</th>
-                  <th scope="col">Duration</th>
-                  <th scope="col">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Classic Cut
-                    <div class="service-note">Wash, cut &amp; style</div>
-                  </td>
-                  <td>Timeless cuts with modern edge. Fades, tapers, quiffs, and everything between.</td>
-                  <td>45 min</td>
-                  <td>$55+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Fade &amp; Detail
-                    <div class="service-note">Signature service</div>
-                  </td>
-                  <td>Razor-sharp fade with line-up and beard shaping. Includes steamed towel finish.</td>
-                  <td>60 min</td>
-                  <td>$70+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Beard Shaping &amp; Trim
-                    <div class="service-note">Add-on or standalone</div>
-                  </td>
-                  <td>Clean up, define, and shape your beard with precision. Includes conditioning balm.</td>
-                  <td>30 min</td>
-                  <td>$35+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Men's Color
-                    <div class="service-note">Root blend or full color</div>
-                  </td>
-                  <td>Seamless gray blending, subtle highlights, or bold transformation. Natural-looking results.</td>
-                  <td>60–90 min</td>
-                  <td>$75+</td>
-                </tr>
-                <tr>
-                  <td>
-                    Junior Cut (Under 12)
-                    <div class="service-note">Patient &amp; gentle approach</div>
-                  </td>
-                  <td>A calm, friendly cut experience for the littlest clients. Parents always welcome.</td>
-                  <td>30 min</td>
-                  <td>$40</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div><!-- / float-zone-wrap -->
-    </div>
-
-    <!-- Pricing note -->
-    <div class="container">
-      <div style="
-        background: var(--white);
-        border: 1px solid rgba(94,109,98,0.12);
-        padding: 2rem 2.5rem;
-        max-width: 700px;
-        margin: 0 auto;
-        text-align: center;
-      ">
-        <span class="section-label">Pricing Note</span>
-        <p>Prices listed are starting rates and may vary based on hair length, density, and service complexity. An accurate quote will be provided during your consultation. All services include a complimentary wash unless noted.</p>
       </div>
     </div>
   </section>
 
-
-  <!-- ── CTA ── -->
-  <section class="cta-banner" aria-label="Book a service">
-    <h2>Find Your Perfect Service</h2>
-    <p>Not sure what you need? Book a complimentary consultation and we'll guide you.</p>
-    <div class="cta-banner-actions">
-      <button class="btn btn-gold demo-trigger">Book Now</button>
-      <a href="contact.html" class="btn btn-outline-white">Ask a Question</a>
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="overline reveal">Reserve Your Service</span>
+      <h2 class="reveal reveal-delay-1">Ready to get started?</h2>
+      <p class="reveal reveal-delay-2">Book your appointment online or call us directly. Our team is ready to craft something extraordinary for you.</p>
+      <button class="btn btn-outline book-trigger reveal reveal-delay-3">Book Your Appointment →</button>
     </div>
   </section>
 
-
-  <!-- ── FOOTER ── -->
-  <footer class="footer" role="contentinfo">
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="footer-brand-logo">Velo Co. <span>Salon</span></span>
-          <p>Ann Arbor's premier boutique salon — where artistry, texture, and intention meet.</p>
+          <span class="footer-logo">Velo <span>Hair</span> Co</span>
+          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
         </div>
-        <div>
-          <h4>Navigate</h4>
+        <div class="footer-col">
+          <h6>Navigate</h6>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -450,88 +382,59 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">Cuts &amp; Styling</a></li>
-            <li><a href="services.html">Color &amp; Highlights</a></li>
-            <li><a href="services.html">Texture &amp; Curl</a></li>
-            <li><a href="services.html">Men's Grooming</a></li>
-          </ul>
+        <div class="footer-col">
+          <h6>Hours</h6>
+          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
         </div>
-        <div class="footer-contact">
-          <h4>Connect</h4>
-          <p>417 S. Main Street<br>Ann Arbor, MI 48104</p>
-          <p style="margin-top:.5rem">(734) 555-0182</p>
-          <p>hello@velocosalon.com</p>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Velo Co. Salon. All rights reserved.</p>
-        <p>Site by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></p>
+        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
+        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
       </div>
     </div>
   </footer>
 
-
-  <!-- ── DEMO MODAL ── -->
-  <div class="demo-modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
-    <div class="demo-modal">
-      <button class="demo-modal-close" id="demoModalClose" aria-label="Close modal">✕</button>
-      <span class="demo-modal-scissor" aria-hidden="true">✂️</span>
-      <h3 id="demoModalTitle">Book Your Visit</h3>
-      <p>This is a demo site for display purposes only.<br>
-        <strong>Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></strong>.</p>
-      <button class="btn btn-primary" id="demoModalConfirm">Got It, Thanks!</button>
-      <p class="demo-tag">Velo Co. Salon · Demo Build</p>
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="modalClose">&times;</button>
+      <span class="demo-modal-logo">Velo Hair Co</span>
+      <h3>Demo Site</h3>
+      <p>This is a demo site for display purposes only.</p>
+      <p>Online booking is not active in this preview.</p>
+      <div class="demo-modal-credit">
+        <p>Designed &amp; Built by</p>
+        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
+      </div>
     </div>
   </div>
 
-
   <script>
-    const demoModal = document.getElementById('demoModal');
-    const demoClose = document.getElementById('demoModalClose');
-    const demoConfirm = document.getElementById('demoModalConfirm');
-
-    document.querySelectorAll('.demo-trigger').forEach(btn => {
-      btn.addEventListener('click', () => {
-        demoModal.classList.add('active');
-        demoModal.removeAttribute('aria-hidden');
-      });
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
     });
-    function closeDemo() {
-      demoModal.classList.remove('active');
-      demoModal.setAttribute('aria-hidden', 'true');
-    }
-    demoClose.addEventListener('click', closeDemo);
-    demoConfirm.addEventListener('click', closeDemo);
-    demoModal.addEventListener('click', e => { if (e.target === demoModal) closeDemo(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDemo(); });
-
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileClose = document.getElementById('mobileClose');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-    function openMenu() {
-      mobileMenu.classList.add('active'); mobileOverlay.classList.add('active');
-      mobileClose.classList.add('visible'); document.body.classList.add('menu-open');
-      hamburger.setAttribute('aria-expanded', 'true'); mobileMenu.removeAttribute('aria-hidden');
-    }
-    function closeMenu() {
-      mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active');
-      mobileClose.classList.remove('visible'); document.body.classList.remove('menu-open');
-      hamburger.setAttribute('aria-expanded', 'false'); mobileMenu.setAttribute('aria-hidden', 'true');
-    }
-    hamburger.addEventListener('click', openMenu);
-    mobileClose.addEventListener('click', closeMenu);
-    mobileOverlay.addEventListener('click', closeMenu);
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
-
-    const revealEls = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => obs.observe(el));
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
+    const modal = document.getElementById('demoModal');
+    document.querySelectorAll('.book-trigger').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>

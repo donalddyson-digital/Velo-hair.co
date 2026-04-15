@@ -3,298 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Velo Co. Salon gallery — portfolio of cuts, color, texture, and grooming work in Ann Arbor, MI.">
-  <title>Gallery — Velo Co. Salon</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Gallery — Velo Hair Co</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ── NAVBAR ── -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">Velo Co. <span>Salon</span></a>
-      <ul class="nav-links" role="list">
+  <!-- NAV -->
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
         <li><a href="story.html">Our Story</a></li>
         <li><a href="team.html">Team</a></li>
         <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-book demo-trigger" aria-label="Book appointment">Book Now</button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <button class="nav-book-btn book-trigger">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <div class="mobile-overlay" id="mobileOverlay" aria-hidden="true"></div>
-  <div class="mobile-menu" id="mobileMenu" aria-hidden="true" role="dialog" aria-label="Mobile navigation">
-    <nav class="mobile-nav-links">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="story.html">Our Story</a>
-      <a href="team.html">Team</a>
-      <a href="visit.html">Visit</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="mobile-menu-book">
-      <button class="btn btn-primary demo-trigger" style="width:100%">Book Your Visit</button>
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileClose">&times;</button>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="story.html">Our Story</a>
+    <a href="team.html">Team</a>
+    <a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/velo-craft-team-collaboration.jpg" alt="Velo team collaboration">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <span class="overline">Our Work</span>
+        <h1>Gallery</h1>
+      </div>
     </div>
   </div>
-  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
 
-
-  <!-- ── PAGE HERO ── -->
-  <header class="page-hero">
+  <!-- GALLERY SECTION -->
+  <section class="section-pad bg-off-white">
     <div class="container">
-      <span class="section-label">The Work</span>
-      <h1 class="reveal">Portfolio &amp;<br>Gallery</h1>
-      <div class="gold-divider" aria-hidden="true"></div>
-      <p class="reveal">A living portfolio of transformations, textures, and styles from the Velo Co. team. Every image tells a story of collaboration.</p>
-    </div>
-  </header>
-
-
-  <!-- ── GALLERY ── -->
-  <section class="section section-white" aria-label="Photo gallery">
-    <div class="container">
-
-      <!-- Filter Bar -->
-      <div class="gallery-filter-row" role="group" aria-label="Filter gallery">
-        <button class="gal-filter-btn active" data-filter="all">All Work</button>
-        <button class="gal-filter-btn" data-filter="color">Color</button>
-        <button class="gal-filter-btn" data-filter="texture">Texture</button>
-        <button class="gal-filter-btn" data-filter="style">Cuts &amp; Styles</button>
-        <button class="gal-filter-btn" data-filter="mens">Men's</button>
-        <button class="gal-filter-btn" data-filter="craft">Our Craft</button>
+      <div class="section-header reveal mb-40">
+        <span class="overline">Portfolio</span>
+        <h2>Hair as expression</h2>
+        <div class="divider"></div>
+        <p class="gallery-intro-p">
+          Browse our portfolio of styles, textures, colors, and craftsmanship. Every image represents a real client and a real conversation brought to life.
+        </p>
       </div>
 
-      <!-- Masonry Grid — 24 images using column-count -->
-      <div class="masonry-grid" id="masonryGrid" role="list">
-
-        <!-- Portfolio Results — 12 images -->
-        <div class="masonry-item" data-category="texture" role="listitem">
-          <img src="images/velo-texture-curly-highlights.jpg" alt="Curly hair with caramel highlights" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Curly Highlights</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="style" role="listitem">
-          <img src="images/velo-style-platinum-pixie.jpg" alt="Platinum blonde pixie cut" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Platinum Pixie</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="color" role="listitem">
-          <img src="images/velo-color-magenta-waves.jpg" alt="Magenta waves vivid color" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Magenta Waves</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="style" role="listitem">
-          <img src="images/velo-style-navy-lob.jpg" alt="Navy blue lob haircut" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Navy Lob</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="texture" role="listitem">
-          <img src="images/velo-texture-dreads-adorned.jpg" alt="Adorned locs natural hair" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Adorned Locs</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="style" role="listitem">
-          <img src="images/velo-style-copper-shag.jpg" alt="Copper toned shag haircut" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Copper Shag</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="style" role="listitem">
-          <img src="images/velo-style-silver-bob.jpg" alt="Silver grey bob haircut" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Silver Bob</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="texture" role="listitem">
-          <img src="images/velo-texture-natural-updo.jpg" alt="Natural hair updo style" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Natural Updo</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="style" role="listitem">
-          <img src="images/velo-style-emerald-fade.jpg" alt="Emerald green fade haircut" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Emerald Fade</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="color" role="listitem">
-          <img src="images/velo-color-neon-mohawk.jpg" alt="Neon colors mohawk hairstyle" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Neon Mohawk</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="texture" role="listitem">
-          <img src="images/velo-texture-honey-curls.jpg" alt="Honey blonde natural curls" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Honey Curls</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="mens" role="listitem">
-          <img src="images/velo-mens-classic-quiff.jpg" alt="Men's classic quiff hairstyle" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Classic Quiff</span>
-          </div>
-        </div>
-
-        <!-- Action / Craft images — 6 -->
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-foil-prep.png" alt="Stylist applying foil highlights" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Foil Prep</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-color-rings.png" alt="Color swatches and rings" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Color Selection</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-sectioning-comb.png" alt="Precision sectioning technique" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Precision Sectioning</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-wet-cutting.png" alt="Wet cutting technique" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Wet Cutting</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-color-mixing.png" alt="Mixing color formulas" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Color Mixing</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-action-precision-trim.png" alt="Precision trim detailing" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Precision Trim</span>
-          </div>
-        </div>
-
-        <!-- Salon atmosphere — 4 experience + 2 space images -->
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-experience-stylist-care.png" alt="Stylist providing attentive care" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Stylist Care</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-experience-shampoo-bowl.png" alt="Relaxing shampoo bowl service" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Shampoo Service</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="mens" role="listitem">
-          <img src="images/velo-client-mens-grooming.png" alt="Men's grooming service" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Men's Grooming</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-experience-lounge-wait.png" alt="Velo Co. waiting lounge" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">The Lounge</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Co. Salon Ann Arbor exterior" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Our Storefront</span>
-          </div>
-        </div>
-
-        <div class="masonry-item" data-category="craft" role="listitem">
-          <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Velo Co. Salon interior" loading="lazy">
-          <div class="masonry-item-overlay" aria-hidden="true">
-            <span class="masonry-overlay-icon">⊕</span>
-            <span class="masonry-overlay-caption">Styling Station</span>
-          </div>
-        </div>
-
-      </div><!-- / masonry-grid -->
-
-      <!-- CTA below gallery -->
-      <div class="text-center" style="margin-top:3.5rem">
-        <p style="margin-bottom:1.5rem; font-size:0.95rem;">Inspired by what you see? Let's create something for you.</p>
-        <button class="btn btn-primary demo-trigger">Book a Consultation</button>
+      <!-- FILTER BAR -->
+      <div class="gallery-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="styles">Styles</button>
+        <button class="filter-btn" data-filter="texture">Texture</button>
+        <button class="filter-btn" data-filter="craft">Craft</button>
+        <button class="filter-btn" data-filter="studio">Studio</button>
       </div>
 
+      <!-- MASONRY GRID -->
+      <div class="masonry-grid" id="masonryGrid">
+
+        <!-- STYLES (9) -->
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-icy-blonde-waves.jpg" alt="Icy blonde waves" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-navy-lob.jpg" alt="Navy lob style" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-platinum-pixie.jpg" alt="Platinum pixie cut" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-silver-bob.jpg" alt="Silver bob" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-surfer-shag.jpg" alt="Surfer shag style" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-autumn-waves.jpg" alt="Autumn waves" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-copper-shag.jpg" alt="Copper shag" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-emerald-fade.jpg" alt="Emerald fade" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="styles">
+          <img src="images/velo-style-ginger-layers.jpg" alt="Ginger layers" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+
+        <!-- TEXTURE (6) -->
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-brunette-volume.jpg" alt="Brunette volume texture" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-curly-blonde-definition.jpg" alt="Curly blonde definition" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-curly-highlights.jpg" alt="Curly highlights" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-dreads-adorned.jpg" alt="Adorned dreads" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-honey-curls.jpg" alt="Honey curls" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="texture">
+          <img src="images/velo-texture-natural-updo.jpg" alt="Natural updo" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+
+        <!-- CRAFT (9) -->
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-fringe-shaping.jpg" alt="Fringe shaping" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-precision-shear-cut.jpg" alt="Precision shear cut" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-razor-detailing.jpg" alt="Razor detailing" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-balayage-painting.jpg" alt="Balayage painting" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-beard-sculpting.jpg" alt="Beard sculpting" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-curly-styling.jpg" alt="Curly styling" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-action-color-rings.jpg" alt="Color rings action" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-action-foil-prep.jpg" alt="Foil prep" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-action-precision-trim.jpg" alt="Precision trim" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-action-sectioning-comb.jpg" alt="Sectioning with comb" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-action-wet-cutting.jpg" alt="Wet cutting" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="craft">
+          <img src="images/velo-craft-team-collaboration.jpg" alt="Team collaboration" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+
+        <!-- STUDIO (7) -->
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Interior styling station" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-studio-lavender-process.jpg" alt="Lavender color process" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-studio-mens-green-texture.jpg" alt="Men's green texture" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-studio-vibrant-orange-prep.jpg" alt="Vibrant orange prep" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-studio-vibrant-pink-stylin.jpg" alt="Vibrant pink styling" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-studio-vibrant-purple-color.jpg" alt="Vibrant purple color" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+        <div class="masonry-item reveal" data-category="studio">
+          <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Hair Co storefront" loading="lazy">
+          <div class="masonry-item-overlay"><span>View</span></div>
+        </div>
+
+      </div>
+      <!-- END MASONRY GRID -->
     </div>
   </section>
 
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">&times;</button>
+    <button class="lightbox-prev" id="lightboxPrev">&#8592;</button>
+    <div class="lightbox-inner">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+    <button class="lightbox-next" id="lightboxNext">&#8594;</button>
+  </div>
 
-  <!-- ── FOOTER ── -->
-  <footer class="footer" role="contentinfo">
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="overline reveal">Inspired?</span>
+      <h2 class="reveal reveal-delay-1">Bring your vision to life</h2>
+      <p class="reveal reveal-delay-2">Share your inspiration images when you book and our artists will help translate your vision into reality.</p>
+      <button class="btn btn-outline book-trigger reveal reveal-delay-3">Book Your Transformation →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <span class="footer-brand-logo">Velo Co. <span>Salon</span></span>
-          <p>Ann Arbor's premier boutique salon — where artistry, texture, and intention meet.</p>
+          <span class="footer-logo">Velo <span>Hair</span> Co</span>
+          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
         </div>
-        <div>
-          <h4>Navigate</h4>
+        <div class="footer-col">
+          <h6>Navigate</h6>
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="services.html">Services</a></li>
@@ -305,84 +269,63 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html">Cuts &amp; Styling</a></li>
-            <li><a href="services.html">Color &amp; Highlights</a></li>
-            <li><a href="services.html">Texture &amp; Curl</a></li>
-            <li><a href="services.html">Men's Grooming</a></li>
-          </ul>
+        <div class="footer-col">
+          <h6>Hours</h6>
+          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
         </div>
-        <div class="footer-contact">
-          <h4>Connect</h4>
-          <p>417 S. Main Street<br>Ann Arbor, MI 48104</p>
-          <p style="margin-top:.5rem">(734) 555-0182</p>
-          <p>hello@velocosalon.com</p>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2025 Velo Co. Salon. All rights reserved.</p>
-        <p>Site by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></p>
+        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
+        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
       </div>
     </div>
   </footer>
 
-
-  <!-- ── LIGHTBOX — Z-index: 2000 ── -->
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">✕</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="" role="img">
-    <div class="lightbox-caption" id="lightboxCaption" aria-live="polite"></div>
-  </div>
-
-
-  <!-- ── DEMO MODAL ── -->
-  <div class="demo-modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle" aria-hidden="true">
-    <div class="demo-modal">
-      <button class="demo-modal-close" id="demoModalClose" aria-label="Close modal">✕</button>
-      <span class="demo-modal-scissor" aria-hidden="true">✂️</span>
-      <h3 id="demoModalTitle">Book Your Visit</h3>
-      <p>This is a demo site for display purposes only.<br>
-        <strong>Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></strong>.</p>
-      <button class="btn btn-primary" id="demoModalConfirm">Got It, Thanks!</button>
-      <p class="demo-tag">Velo Co. Salon · Demo Build</p>
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="modalClose">&times;</button>
+      <span class="demo-modal-logo">Velo Hair Co</span>
+      <h3>Demo Site</h3>
+      <p>This is a demo site for display purposes only.</p>
+      <p>Online booking is not active in this preview.</p>
+      <div class="demo-modal-credit">
+        <p>Designed &amp; Built by</p>
+        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
+      </div>
     </div>
   </div>
 
-
   <script>
-    /* ── LIGHTBOX ── */
-    const lightbox      = document.getElementById('lightbox');
-    const lightboxImg   = document.getElementById('lightboxImg');
-    const lightboxCap   = document.getElementById('lightboxCaption');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    document.querySelectorAll('.masonry-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const img = item.querySelector('img');
-        const cap = item.querySelector('.masonry-overlay-caption');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightboxCap.textContent = cap ? cap.textContent : '';
-        lightbox.classList.add('active');
-        lightbox.removeAttribute('aria-hidden');
-        lightboxClose.focus();
-      });
+    // Nav scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    function closeLightbox() {
-      lightbox.classList.remove('active');
-      lightbox.setAttribute('aria-hidden', 'true');
-      lightboxImg.src = '';
-    }
+    // Mobile nav
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
 
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    // Demo modal
+    const modal = document.getElementById('demoModal');
+    document.querySelectorAll('.book-trigger').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
 
-    /* ── GALLERY FILTER ── */
-    const filterBtns = document.querySelectorAll('.gal-filter-btn');
-    const items       = document.querySelectorAll('.masonry-item');
+    // Gallery Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.masonry-item');
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -399,55 +342,63 @@
       });
     });
 
-    /* ── DEMO MODAL ── */
-    const demoModal  = document.getElementById('demoModal');
-    const demoClose  = document.getElementById('demoModalClose');
-    const demoConfirm = document.getElementById('demoModalConfirm');
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    let visibleImages = [];
+    let currentIndex = 0;
 
-    document.querySelectorAll('.demo-trigger').forEach(btn => {
-      btn.addEventListener('click', () => {
-        demoModal.classList.add('active');
-        demoModal.removeAttribute('aria-hidden');
+    function getVisibleImages() {
+      return Array.from(document.querySelectorAll('.masonry-item[style!="display: none;"] img, .masonry-item:not([style]) img'));
+    }
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        visibleImages = getVisibleImages();
+        const img = item.querySelector('img');
+        currentIndex = visibleImages.indexOf(img);
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
       });
     });
-    function closeDemo() {
-      demoModal.classList.remove('active');
-      demoModal.setAttribute('aria-hidden', 'true');
-    }
-    demoClose.addEventListener('click', closeDemo);
-    demoConfirm.addEventListener('click', closeDemo);
-    demoModal.addEventListener('click', e => { if (e.target === demoModal) closeDemo(); });
 
-    /* ── MOBILE MENU ── */
-    const hamburger  = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileClose = document.getElementById('mobileClose');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-    function openMenu() {
-      mobileMenu.classList.add('active'); mobileOverlay.classList.add('active');
-      mobileClose.classList.add('visible'); document.body.classList.add('menu-open');
-      hamburger.setAttribute('aria-expanded', 'true'); mobileMenu.removeAttribute('aria-hidden');
-    }
-    function closeMenu() {
-      mobileMenu.classList.remove('active'); mobileOverlay.classList.remove('active');
-      mobileClose.classList.remove('visible'); document.body.classList.remove('menu-open');
-      hamburger.setAttribute('aria-expanded', 'false'); mobileMenu.setAttribute('aria-hidden', 'true');
-    }
-    hamburger.addEventListener('click', openMenu);
-    mobileClose.addEventListener('click', closeMenu);
-    mobileOverlay.addEventListener('click', closeMenu);
+    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
 
-    /* ── GLOBAL ESCAPE ── */
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { closeLightbox(); closeDemo(); closeMenu(); }
+    document.getElementById('lightboxPrev').addEventListener('click', () => {
+      visibleImages = getVisibleImages();
+      currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
+      lightboxImg.src = visibleImages[currentIndex].src;
+      lightboxImg.alt = visibleImages[currentIndex].alt;
     });
 
-    /* ── REVEAL ── */
-    const revealEls = document.querySelectorAll('.reveal');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.1 });
-    revealEls.forEach(el => obs.observe(el));
+    document.getElementById('lightboxNext').addEventListener('click', () => {
+      visibleImages = getVisibleImages();
+      currentIndex = (currentIndex + 1) % visibleImages.length;
+      lightboxImg.src = visibleImages[currentIndex].src;
+      lightboxImg.alt = visibleImages[currentIndex].alt;
+    });
+
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') document.getElementById('lightboxPrev').click();
+      if (e.key === 'ArrowRight') document.getElementById('lightboxNext').click();
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // Reveal
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
