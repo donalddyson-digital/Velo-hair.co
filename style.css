@@ -1259,3 +1259,9 @@ footer {
     display: none !important;
 }
 
+.section-label {
+    color: var(--gold) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.2em;
+}
+
