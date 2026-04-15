@@ -384,5 +384,33 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
     reveals.forEach(el => observer.observe(el));
   </script>
+  <script>
+  const navToggle = document.querySelector('.nav-toggle');
+  const navMobile = document.querySelector('.nav-mobile');
+  const navClose = document.querySelector('.nav-mobile-close');
+
+  if(navToggle && navMobile && navClose) {
+    // Open Menu
+    navToggle.addEventListener('click', () => {
+      navMobile.classList.add('open');
+      document.body.style.overflow = 'hidden'; // This is the safety line
+    });
+
+    // Close Menu
+    navClose.addEventListener('click', () => {
+      navMobile.classList.remove('open');
+      document.body.style.overflow = 'auto';   // Restores scrolling
+    });
+
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-mobile a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMobile.classList.remove('open');
+        document.body.style.overflow = 'auto';
+      });
+    });
+  }
+</script>
+
 </body>
 </html>
