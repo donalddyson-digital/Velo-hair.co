@@ -271,34 +271,7 @@
     </div>
   </div>
 
-  <script>
-    const nav = document.getElementById('siteNav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-    document.getElementById('navToggle').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.add('open');
-    });
-    document.getElementById('mobileClose').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.remove('open');
-    });
-    const modal = document.getElementById('demoModal');
-    document.querySelectorAll('.book-trigger').forEach(el => {
-      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
-    });
-    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
-    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-    reveals.forEach(el => observer.observe(el));
-  </script>
-</body>
-</html>
-
-  <script>
-    // 1. SELECTORS
+    <script>
     const siteNav = document.getElementById('siteNav');
     const navToggle = document.getElementById('navToggle');
     const mobileNav = document.getElementById('mobileNav');
@@ -306,24 +279,19 @@
     const demoModal = document.getElementById('demoModal');
     const modalClose = document.getElementById('modalClose');
 
-    // 2. NAVBAR SCROLL EFFECT
     window.addEventListener('scroll', () => {
       siteNav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // 3. MOBILE MENU LOGIC (WITH SAFETY LINE)
     if(navToggle && mobileNav && mobileClose) {
       navToggle.addEventListener('click', () => {
         mobileNav.classList.add('open');
         document.body.style.overflow = 'hidden'; 
       });
-
       mobileClose.addEventListener('click', () => {
         mobileNav.classList.remove('open');
         document.body.style.overflow = 'auto'; 
       });
-
-      // Close menu if a link is clicked
       document.querySelectorAll('#mobileNav a').forEach(link => {
         link.addEventListener('click', () => {
           mobileNav.classList.remove('open');
@@ -332,7 +300,6 @@
       });
     }
 
-    // 4. DEMO MODAL LOGIC
     document.querySelectorAll('.book-trigger').forEach(btn => {
       btn.addEventListener('click', e => {
         e.preventDefault();
@@ -344,22 +311,13 @@
       modalClose.addEventListener('click', () => demoModal.classList.remove('open'));
     }
 
-    // Close modal on background click
-    window.addEventListener('click', e => {
-      if (e.target === demoModal) demoModal.classList.remove('open');
-    });
-
-    // 5. REVEAL ANIMATIONS
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) { 
-          entry.target.classList.add('visible'); 
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.1 });
 
     document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
-
