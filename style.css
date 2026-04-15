@@ -1271,3 +1271,21 @@ footer {
     margin-bottom: 0 !important;
 }
 
+/* --- GAP-KILLER: PINCH THE WHITE SPACE --- */
+section.boutique {
+    padding-bottom: 0 !important;
+    margin-bottom: -40px !important; /* Pulls the next section up */
+}
+
+.boutique-floats {
+    height: auto !important;
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Forces the container to stop holding extra height */
+.boutique-grid {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
