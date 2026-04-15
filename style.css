@@ -1212,3 +1212,50 @@ footer {
         margin-top: 0 !important;
     }
 }
+
+/* --- BOUTIQUE FULL-WIDTH MOBILE FIX --- */
+.boutique-floats {
+    display: flex !important;
+    flex-direction: column !important; /* Stacks them vertically on mobile */
+    gap: 30px !important;
+    position: relative !important;
+    height: auto !important;
+    padding: 20px 0 !important;
+}
+
+.float-img, 
+.float-main, 
+.float-accent-top, 
+.float-accent-bottom {
+    position: relative !important;
+    width: 100% !important; /* Makes them fill the screen width */
+    max-width: 100% !important;
+    height: auto !important;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    border-radius: 12px !important;
+    box-shadow: 0 15px 35px rgba(30,30,27,0.1) !important;
+    filter: none !important;
+}
+
+/* On Desktop, we can put them back side-by-side */
+@media (min-width: 769px) {
+    .boutique-floats {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 40px !important;
+    }
+    .float-img:nth-child(2) {
+        margin-top: 60px !important;
+    }
+}
+
+/* Hide the stray lines */
+.boutique-graphic-box {
+    display: none !important;
+}
+
