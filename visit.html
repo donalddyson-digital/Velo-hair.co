@@ -2,212 +2,342 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Visit — Velo Hair Co.</title>
-  <meta name="description" content="Visit Velo Hair Co. at 312 S. Main Street in downtown Ann Arbor — hours, parking, and what to expect on your first visit.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Visit Us — Velo Hair Co</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">Velo<i> hair</i><span class="dot">.</span>co</a>
-  <div class="nav-links">
+  <!-- NAV -->
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="visit.html" class="active">Visit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-book-btn book-trigger">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileClose">&times;</button>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
     <a href="story.html">Our Story</a>
     <a href="team.html">Team</a>
-    <a href="visit.html" class="active">Visit</a>
+    <a href="visit.html">Visit</a>
     <a href="contact.html">Contact</a>
-  </div>
-  <a href="#" class="nav-cta js-book" data-demo>Book Now</a>
-  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="wrap visit-hero">
-  <div>
-    <span class="eyebrow reveal">Visit · Downtown Ann Arbor</span>
-    <h1 class="reveal delay-1">Find us at <em>Main &amp; Liberty.</em></h1>
-    <div class="address reveal delay-2">
-      312 S. Main Street<br>
-      Ann Arbor, Michigan 48104
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Hair Co Ann Arbor storefront">
     </div>
-    <div class="hero-ctas reveal delay-3">
-      <a href="#" class="btn js-book" data-demo>Book a Visit <span class="arrow">→</span></a>
-      <a href="contact.html" class="link-underline">Get in Touch</a>
-    </div>
-  </div>
-  <div class="hero-img reveal delay-2">
-    <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Hair Co. storefront on Main Street">
-  </div>
-</section>
-
-<!-- HOURS -->
-<section class="hours-block">
-  <div class="wrap">
-    <div class="hours-grid">
-      <div class="hours-info reveal">
-        <span class="eyebrow">Studio Hours</span>
-        <h3 class="mt-sm">Open <em>Tuesday</em> through <em>Saturday.</em></h3>
-        <p>We book by appointment only — no walk-ins — so every chair gets our full attention. We recommend booking two to three weeks in advance for weekend appointments.</p>
-        <p>Guests are welcome to arrive up to fifteen minutes early to settle in at the lounge, make a coffee, and flip through the look book.</p>
-      </div>
-      <table class="hours-table reveal delay-1">
-        <tr class="closed"><td>Monday</td><td>Closed</td></tr>
-        <tr><td>Tuesday</td><td>10:00 — 7:00</td></tr>
-        <tr><td>Wednesday</td><td>10:00 — 7:00</td></tr>
-        <tr><td>Thursday</td><td>10:00 — 8:00</td></tr>
-        <tr><td>Friday</td><td>10:00 — 7:00</td></tr>
-        <tr><td>Saturday</td><td>9:00 — 5:00</td></tr>
-        <tr class="closed"><td>Sunday</td><td>Closed</td></tr>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- AMENITIES -->
-<section class="amenities">
-  <div class="wrap">
-    <div class="team-header">
-      <div>
-        <span class="eyebrow reveal">At the Studio</span>
-        <h2 class="reveal delay-1">Small <em>comforts.</em></h2>
-      </div>
-      <p class="reveal delay-2">A few quiet thoughtful touches we've built into every visit, because the chair isn't the only thing that should feel considered.</p>
-    </div>
-
-    <div class="amenities-grid">
-      <div class="amenity reveal">
-        <div class="icon">☕</div>
-        <h4>The Bar</h4>
-        <p>Espresso, seasonal teas, and sparkling water from a local roaster.</p>
-      </div>
-      <div class="amenity reveal delay-1">
-        <div class="icon">♪</div>
-        <h4>Quiet Playlist</h4>
-        <p>Curated low-volume music — never loud enough to talk over.</p>
-      </div>
-      <div class="amenity reveal delay-2">
-        <div class="icon">❀</div>
-        <h4>Scalp Therapy</h4>
-        <p>Every shampoo includes a ten-minute pressure-point scalp treatment.</p>
-      </div>
-      <div class="amenity reveal delay-3">
-        <div class="icon">✦</div>
-        <h4>Parking Validated</h4>
-        <p>Two hours of free parking at the Liberty Square Structure, one block east.</p>
-      </div>
-      <div class="amenity reveal">
-        <div class="icon">✿</div>
-        <h4>Product Library</h4>
-        <p>Sample every product on your shelf at the studio before buying at home.</p>
-      </div>
-      <div class="amenity reveal delay-1">
-        <div class="icon">☾</div>
-        <h4>Private Room</h4>
-        <p>A fully private suite available on request for long color appointments.</p>
-      </div>
-      <div class="amenity reveal delay-2">
-        <div class="icon">◉</div>
-        <h4>Complimentary Consult</h4>
-        <p>Twenty-minute in-person consultations, free for all new guests.</p>
-      </div>
-      <div class="amenity reveal delay-3">
-        <div class="icon">♡</div>
-        <h4>Loyalty Circle</h4>
-        <p>Every sixth cut or color service includes a complimentary treatment.</p>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <span class="overline">Ann Arbor, Michigan</span>
+        <h1>Visit Us</h1>
       </div>
     </div>
   </div>
-</section>
 
-<!-- MAP -->
-<section class="map-block">
-  <div class="wrap">
-    <span class="eyebrow center reveal">Getting Here</span>
-    <h2 class="reveal delay-1 mt-sm">Between the Kerrytown<br>and Main Street districts.</h2>
-    <div class="map-wrap reveal delay-2">
-      <iframe
-        src="https://www.openstreetmap.org/export/embed.html?bbox=-83.7500%2C42.2760%2C-83.7390%2C42.2830&amp;layer=mapnik&amp;marker=42.2795%2C-83.7441"
-        title="Velo Hair Co. location map"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <!-- LOCATION + HOURS -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="visit-grid">
+
+        <!-- LEFT: HOURS + AMENITIES -->
+        <div class="reveal-left">
+          <span class="overline">Hours &amp; Location</span>
+          <h2>Plan your visit</h2>
+          <div class="divider"></div>
+
+          <h5 class="label-gold-mt40">Studio Hours</h5>
+          <table class="hours-table">
+            <tbody>
+              <tr>
+                <td>Tuesday</td>
+                <td>10:00 am – 7:00 pm</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>10:00 am – 7:00 pm</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>10:00 am – 7:00 pm</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>10:00 am – 7:00 pm</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>9:00 am – 6:00 pm</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>11:00 am – 4:00 pm</td>
+              </tr>
+              <tr>
+                <td>Monday</td>
+                <td class="closed">Closed</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="font-note mt-16">
+            Holiday hours may vary. Check our Instagram for updates.
+          </p>
+
+          <h5 class="label-gold-mt48">Studio Amenities</h5>
+          <div class="amenities-grid">
+            <div class="amenity-item">
+              <div class="amenity-icon">☕</div>
+              <span>Complimentary beverages</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🅿️</div>
+              <span>Street &amp; lot parking</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">♿</div>
+              <span>Wheelchair accessible</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">📶</div>
+              <span>Complimentary WiFi</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🌿</div>
+              <span>Sustainable products</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">💳</div>
+              <span>All major cards accepted</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🎵</div>
+              <span>Curated studio music</span>
+            </div>
+            <div class="amenity-item">
+              <div class="amenity-icon">🐾</div>
+              <span>Small dogs welcome</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: MAP + ADDRESS -->
+        <div class="reveal-right">
+          <div class="visit-map-placeholder">
+            <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Hair Co location Ann Arbor">
+            <div class="map-address-card">
+              <h5>Our Location</h5>
+              <p>123 S Main Street<br>Ann Arbor, MI 48104</p>
+              <a href="#" class="directions-link book-trigger">Get Directions →</a>
+            </div>
+          </div>
+
+          <div class="mt-40">
+            <h5 class="label-gold-mb16">Getting Here</h5>
+            <div class="directions-list">
+              <div class="direction-item">
+                <p class="label-sage">By Car</p>
+                <p class="direction-body">
+                  Located in downtown Ann Arbor. Street parking available on S Main and Liberty. Structure parking at the Fourth &amp; William garage (3 min walk).
+                </p>
+              </div>
+              <div class="direction-item">
+                <p class="label-sage">By Bus</p>
+                <p class="direction-body">
+                  TheRide Route 4 stops one block away at Main &amp; William. Route 16 stops at Main &amp; Washington (2 min walk).
+                </p>
+              </div>
+              <div class="direction-item">
+                <p class="label-sage">On Foot</p>
+                <p class="direction-body">
+                  A 10-minute walk from U of M Central Campus. Centrally located near Kerrytown, Zingerman's, and the Ann Arbor Farmers Market.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ATMOSPHERE STRIP -->
+  <section>
+    <div class="atmosphere-strip reveal">
+      <div class="atmosphere-img">
+        <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Velo interior styling stations">
+      </div>
+      <div class="atmosphere-img">
+        <img src="images/velo-studio-lavender-process.jpg" alt="Color process in studio">
+      </div>
+      <div class="atmosphere-img">
+        <img src="images/velo-experience-lounge-wait.PNG" alt="Velo lounge area">
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDIO EXPERIENCE -->
+  <section class="section-pad bg-cream">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="overline">The Experience</span>
+        <h2>What to expect at Velo</h2>
+        <div class="divider divider-center"></div>
+      </div>
+      <div class="steps-grid reveal">
+        <div class="step-item">
+          <div class="step-number">01</div>
+          <h4 class="step-title">Arrive &amp; Unwind</h4>
+          <p class="font-body-sm">
+            Settle into our lounge with a coffee, tea, or sparkling water. Browse looks, flip through magazines, or simply enjoy the calm before your appointment begins.
+          </p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">02</div>
+          <h4 class="step-title">Your Consultation</h4>
+          <p class="font-body-sm">
+            Every service begins with a dedicated consultation. Your artist will listen to your goals, assess your hair, and collaborate with you on a plan — no guessing, no assumptions.
+          </p>
+        </div>
+        <div class="text-center">
+          <div class="step-number">03</div>
+          <h4 class="step-title">The Transformation</h4>
+          <p class="step-desc">
+            The work begins. Your artist is fully focused — no rushing, no double-booking. The service ends with styling guidance, product recommendations, and a finish you'll be proud to wear.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW BAND -->
+  <section class="bg-sage-section">
+    <div class="container">
+      <div class="visit-contact-grid">
+        <div class="reveal-left">
+          <span class="overline">Reach Out</span>
+          <h2 class="visit-contact-header">Questions before you visit?</h2>
+          <div class="divider"></div>
+          <p class="visit-contact-subtext">
+            Our team is happy to answer any questions about services, parking, what to bring, or anything else. Don't hesitate to reach out before your first visit.
+          </p>
+          <div class="visit-contact-links">
+            <button class="btn btn-outline book-trigger">Book Now →</button>
+            <a href="contact.html" class="link-ghost-cream">Send a Message</a>
+          </div>
+        </div>
+        <div class="reveal-right contact-details-col">
+          <div class="contact-detail-item">
+            <p class="contact-detail-label">Phone</p>
+            <p class="contact-detail-value">(734) 555-0192</p>
+          </div>
+          <div class="contact-detail-item">
+            <p class="contact-detail-label">Email</p>
+            <p class="contact-detail-value">hello@velohairo.com</p>
+          </div>
+          <div>
+            <p class="contact-detail-label">Instagram</p>
+            <p class="contact-detail-value">@veloharico</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Velo <span>Hair</span> Co</span>
+          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Navigate</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Hours</h6>
+          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
+        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="modalClose">&times;</button>
+      <span class="demo-modal-logo">Velo Hair Co</span>
+      <h3>Demo Site</h3>
+      <p>This is a demo site for display purposes only.</p>
+      <p>Online booking is not active in this preview.</p>
+      <div class="demo-modal-credit">
+        <p>Designed &amp; Built by</p>
+        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- CTA -->
-<section class="cta-band">
-  <div class="wrap">
-    <span class="eyebrow center reveal">First Visit</span>
-    <h2 class="reveal delay-1">Come in for a <em>consultation.</em></h2>
-    <p class="reveal delay-2">Twenty minutes, no charge, no pressure. Sit with one of our artists, share your hair history, and leave with a real plan.</p>
-    <a href="#" class="btn btn-gold reveal delay-3 js-book" data-demo>Reserve Your Chair <span class="arrow">→</span></a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Velo<i> hair</i>.co</div>
-        <p>An editorial boutique salon in the heart of downtown Ann Arbor. Precision cuts, dimensional color, and a studio built for the way you actually live.</p>
-      </div>
-      <div>
-        <h5>Studio</h5>
-        <address class="footer-address">
-          312 S. Main Street<br>
-          Ann Arbor, MI 48104<br><br>
-          <a href="#" class="js-contact" data-demo>hello@velohair.co</a><br>
-          <a href="#" class="js-contact" data-demo>(734) 555-0142</a>
-        </address>
-      </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Hours</h5>
-        <ul>
-          <li>Tuesday — Friday · 10–7</li>
-          <li>Saturday · 9–5</li>
-          <li>Sunday &amp; Monday · Closed</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Velo Hair Co. All rights reserved.</span>
-      <span>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></span>
-    </div>
-  </div>
-</footer>
-
-<!-- MODAL -->
-<div class="modal" id="demoModal">
-  <div class="modal-inner">
-    <button class="modal-close" aria-label="Close">×</button>
-    <span class="eyebrow">Demo Notice</span>
-    <h3>This is a <em>demo site.</em></h3>
-    <p>This is a demo site for display purposes only. Built by Dyson Digital.</p>
-    <div class="credit">Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></div>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
+  <script>
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
+    const modal = document.getElementById('demoModal');
+    document.querySelectorAll('.book-trigger').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

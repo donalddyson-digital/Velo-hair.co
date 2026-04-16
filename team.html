@@ -2,180 +2,327 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Team — Velo Hair Co.</title>
-  <meta name="description" content="Meet the seven artists of Velo Hair Co. — specialists in cuts, color, texture, and men's grooming.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Our Team — Velo Hair Co</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">Velo<i> hair</i><span class="dot">.</span>co</a>
-  <div class="nav-links">
+  <!-- NAV -->
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="team.html" class="active">Team</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-book-btn book-trigger">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileClose">&times;</button>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
     <a href="story.html">Our Story</a>
-    <a href="team.html" class="active">Team</a>
+    <a href="team.html">Team</a>
     <a href="visit.html">Visit</a>
     <a href="contact.html">Contact</a>
-  </div>
-  <a href="#" class="nav-cta js-book" data-demo>Book Now</a>
-  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+  </nav>
 
-<!-- HERO -->
-<section class="services-hero">
-  <div class="wrap">
-    <span class="eyebrow center reveal">The Artists</span>
-    <h1 class="reveal delay-1">Seven hands. <em>One house.</em></h1>
-    <p class="reveal delay-2">Every stylist at Velo is a specialist — a cutter, a colorist, a texture expert. Read their stories below, then request the artist whose craft is shaped around what you need.</p>
-  </div>
-</section>
-
-<!-- TEAM GRID -->
-<section class="section">
-  <div class="wrap">
-    <div class="team-circle-grid">
-
-      <div class="team-circle reveal">
-        <div class="photo-round"><img src="images/velo-team-marcus-founder.jpg" alt="Marcus — Founder"></div>
-        <h3>Marcus</h3>
-        <span class="role">Founder · Master Cutter</span>
-        <div class="years">Twelve years behind the chair</div>
-        <p class="bio">Marcus opened Velo in 2014 after a decade of cutting in Chicago, Toronto, and New York. He specializes in architectural shapes — bobs, lobs, and sharp shoulder-length work that moves. Annual education with Vidal Sassoon Academy.</p>
-        <div class="specialties"><span class="spec">Bobs</span><span class="spec">Shape Change</span><span class="spec">Dry Cutting</span></div>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/velo-craft-team-collaboration.jpg" alt="Velo team collaboration">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <span class="overline">The Artists</span>
+        <h1>Our Team</h1>
       </div>
-
-      <div class="team-circle reveal delay-1">
-        <div class="photo-round"><img src="images/velo-team-nia-stylist.jpg" alt="Nia — Senior Stylist"></div>
-        <h3>Nia</h3>
-        <span class="role">Senior Stylist · Creative Director</span>
-        <div class="years">Nine years behind the chair</div>
-        <p class="bio">Nia joined Velo in 2017 and now leads stylist development. Her cuts live at the intersection of precision and softness — sharp line work blended into the kind of texture you can wear on day four. Trained in London &amp; Milan.</p>
-        <div class="specialties"><span class="spec">Lived-in Cuts</span><span class="spec">Fringes</span><span class="spec">Editorial</span></div>
-      </div>
-
-      <div class="team-circle reveal delay-2">
-        <div class="photo-round"><img src="images/velo-team-sarah-waves.jpg" alt="Sarah — Waves &amp; Shape"></div>
-        <h3>Sarah</h3>
-        <span class="role">Waves &amp; Shape Specialist</span>
-        <div class="years">Seven years behind the chair</div>
-        <p class="bio">Sarah is our wave whisperer — shag cuts, beachy layers, the kind of long hair that holds shape without needing heat every morning. She also runs our monthly education nights on bias cutting.</p>
-        <div class="specialties"><span class="spec">Shags</span><span class="spec">Long Layers</span><span class="spec">Waves</span></div>
-      </div>
-
-      <div class="team-circle reveal">
-        <div class="photo-round"><img src="images/velo-team-david-fade-specialist.jpg" alt="David — Fade Specialist"></div>
-        <h3>David</h3>
-        <span class="role">Fade Specialist · Barber</span>
-        <div class="years">Eight years behind the chair</div>
-        <p class="bio">David came up in traditional barbershops before joining Velo's grooming program in 2020. High, mid, low — his fades hold their line for weeks and grow out clean. Hot-towel certified, meticulous.</p>
-        <div class="specialties"><span class="spec">Skin Fades</span><span class="spec">Tapers</span><span class="spec">Line-up</span></div>
-      </div>
-
-      <div class="team-circle reveal delay-1">
-        <div class="photo-round"><img src="images/velo-team-elena-colorist.jpg" alt="Elena — Master Colorist"></div>
-        <h3>Elena</h3>
-        <span class="role">Master Colorist · Color Bar Lead</span>
-        <div class="years">Eleven years behind the chair</div>
-        <p class="bio">Elena leads our color bar and mixes every formula by hand. Her balayage is known for softness at the root and brightness through the ends — color that grows out beautifully. Goldwell Master Colorist, 2023.</p>
-        <div class="specialties"><span class="spec">Balayage</span><span class="spec">Lived-in Blonde</span><span class="spec">Correction</span></div>
-      </div>
-
-      <div class="team-circle reveal delay-2">
-        <div class="photo-round"><img src="images/velo-team-julian-barber.jpg" alt="Julian — Barber"></div>
-        <h3>Julian</h3>
-        <span class="role">Barber · Beard Architect</span>
-        <div class="years">Six years behind the chair</div>
-        <p class="bio">Julian specializes in classic gentleman's cuts with a modern hand — scissor-over-comb work, beard sculpting, and traditional straight-razor finishes. He also hosts our hot-towel shave nights each winter.</p>
-        <div class="specialties"><span class="spec">Classic Cuts</span><span class="spec">Beard Work</span><span class="spec">Straight Razor</span></div>
-      </div>
-
-      <div class="team-circle reveal">
-        <div class="photo-round"><img src="images/velo-team-kassa-texture.jpg" alt="Kassa — Texture Specialist"></div>
-        <h3>Kassa</h3>
-        <span class="role">Texture Specialist · Curl Coach</span>
-        <div class="years">Ten years behind the chair</div>
-        <p class="bio">Kassa built our texture program from the ground up. Curl-by-curl cutting, silk presses, updos for natural hair — plus the education clients need to actually recreate their style at home. DevaCurl advanced certified.</p>
-        <div class="specialties"><span class="spec">Curl-by-Curl</span><span class="spec">Silk Press</span><span class="spec">Natural Updos</span></div>
-      </div>
-
     </div>
   </div>
-</section>
 
-<!-- CTA -->
-<section class="cta-band">
-  <div class="wrap">
-    <span class="eyebrow center reveal">Request Your Artist</span>
-    <h2 class="reveal delay-1">Find the <em>right</em> chair.</h2>
-    <p class="reveal delay-2">When you book, you can request any of our artists by name. Not sure who to choose? Tell us what you're hoping for — we'll match you.</p>
-    <a href="#" class="btn btn-gold reveal delay-3 js-book" data-demo>Request Your Stylist <span class="arrow">→</span></a>
-  </div>
-</section>
+  <!-- TEAM INTRO -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="text-center reveal mb-72">
+        <span class="overline">Seven Masters, One Vision</span>
+        <h2>Meet the people behind the work</h2>
+        <div class="divider divider-center"></div>
+        <p class="max-w-580 text-muted-60">
+          Each artist at Velo brings a distinct perspective and specialized skill set. Together, we cover the full spectrum of hair artistry — from precision cuts to vivid color, from curl care to classic grooming.
+        </p>
+      </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Velo<i> hair</i>.co</div>
-        <p>An editorial boutique salon in the heart of downtown Ann Arbor. Precision cuts, dimensional color, and a studio built for the way you actually live.</p>
-      </div>
-      <div>
-        <h5>Studio</h5>
-        <address class="footer-address">
-          312 S. Main Street<br>
-          Ann Arbor, MI 48104<br><br>
-          <a href="#" class="js-contact" data-demo>hello@velohair.co</a><br>
-          <a href="#" class="js-contact" data-demo>(734) 555-0142</a>
-        </address>
-      </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Hours</h5>
-        <ul>
-          <li>Tuesday — Friday · 10–7</li>
-          <li>Saturday · 9–5</li>
-          <li>Sunday &amp; Monday · Closed</li>
-        </ul>
+      <!-- FULL TEAM GRID -->
+      <div class="team-full-grid">
+
+        <!-- MARCUS -->
+        <div class="team-full-card reveal">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-marcus-founder.jpg" alt="Marcus, Founder and Creative Director">
+          </div>
+          <h3 class="team-full-name">Marcus</h3>
+          <span class="team-full-role">Founder &amp; Creative Director</span>
+          <p class="team-full-bio">
+            Marcus founded Velo in 2012 after training under master stylists in Chicago, New York, and London. His philosophy — that a great cut begins with deep listening — has shaped the culture of every chair in the studio. With 20+ years of experience and a background in editorial styling, Marcus specializes in transformative cuts that honor the natural movement of hair.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Precision Cuts</span>
+            <span class="tag">Editorial Styling</span>
+            <span class="tag">Consultations</span>
+          </div>
+        </div>
+
+        <!-- NIA -->
+        <div class="team-full-card reveal reveal-delay-1">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-nia-stylist.jpg" alt="Nia, Senior Stylist">
+          </div>
+          <h3 class="team-full-name">Nia</h3>
+          <span class="team-full-role">Senior Stylist</span>
+          <p class="team-full-bio">
+            With an intuitive eye for shape and proportion, Nia has built a loyal following for her ability to translate a client's vision into something even better than imagined. A graduate of the Aveda Institute and advanced styling programs in Toronto, she brings warmth, precision, and creative fearlessness to every appointment.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Blowouts</span>
+            <span class="tag">Bob Cuts</span>
+            <span class="tag">Hair Health</span>
+          </div>
+        </div>
+
+        <!-- SARAH -->
+        <div class="team-full-card reveal reveal-delay-2">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-sarah-waves.jpg" alt="Sarah, Wave Specialist">
+          </div>
+          <h3 class="team-full-name">Sarah</h3>
+          <span class="team-full-role">Wave &amp; Texture Specialist</span>
+          <p class="team-full-bio">
+            Sarah is Velo's resident wave and texture expert, with a particular genius for lived-in, effortlessly beautiful styles. Her specialty is the shag — that perfect combination of layers, movement, and personality — but she's equally gifted at any style that calls for softness and dimension. Clients travel from across Michigan to sit in her chair.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Shag Cuts</span>
+            <span class="tag">Waves</span>
+            <span class="tag">Lived-In Styles</span>
+          </div>
+        </div>
+
+        <!-- DAVID -->
+        <div class="team-full-card reveal">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-david-fade-specialist.jpg" alt="David, Fade Specialist">
+          </div>
+          <h3 class="team-full-name">David</h3>
+          <span class="team-full-role">Fade Specialist</span>
+          <p class="team-full-bio">
+            David's precision with clippers is unmatched in Ann Arbor. Trained in classic barbering and modern fade technique, he brings an architectural sensibility to every men's cut. His fades are clean, his tapers are crisp, and his attention to detail is obsessive in the best possible way. A mainstay at Velo since 2016.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Fades &amp; Tapers</span>
+            <span class="tag">Men's Cuts</span>
+            <span class="tag">Classic Barbering</span>
+          </div>
+        </div>
+
+        <!-- ELENA -->
+        <div class="team-full-card reveal reveal-delay-1">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-elena-colorist.jpg" alt="Elena, Master Colorist">
+          </div>
+          <h3 class="team-full-name">Elena</h3>
+          <span class="team-full-role">Master Colorist</span>
+          <p class="team-full-bio">
+            Elena is the color architect of Velo — a Wella Master Colorist with a signature approach to dimensional, lived-in color that looks natural even when it's anything but. From platinum transformations to subtle shadow roots, she navigates the full spectrum with technical mastery and an artist's instinct for what will truly flatter. Her balayage work is coveted.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Balayage</span>
+            <span class="tag">Color Correction</span>
+            <span class="tag">Vivid Color</span>
+          </div>
+        </div>
+
+        <!-- JULIAN -->
+        <div class="team-full-card reveal reveal-delay-2">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-julian-barber.jpg" alt="Julian, Master Barber">
+          </div>
+          <h3 class="team-full-name">Julian</h3>
+          <span class="team-full-role">Master Barber</span>
+          <p class="team-full-bio">
+            Julian brings the art of the classic barber shop to the boutique salon world. His approach is deeply traditional — meticulous, unhurried, and respectful of the rituals of men's grooming — but his sense of style is entirely modern. His beard sculpts are architectural and his hot towel shaves are, clients say, genuinely life-changing.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Beard Sculpting</span>
+            <span class="tag">Hot Towel Shave</span>
+            <span class="tag">Classic Cuts</span>
+          </div>
+        </div>
+
+        <!-- KASSA -->
+        <div class="team-full-card reveal grid-col-full-center">
+          <div class="team-full-avatar">
+            <img src="images/velo-team-kassa-texture.jpg" alt="Kassa, Texture Artist">
+          </div>
+          <h3 class="team-full-name">Kassa</h3>
+          <span class="team-full-role">Texture &amp; Natural Hair Artist</span>
+          <p class="team-full-bio">
+            Kassa is Velo's expert in natural and textured hair, with specialized training in curl science, loc care, and protective styling. She believes that textured hair is not a challenge to be managed but a gift to be celebrated — and her work reflects that philosophy in every appointment. She's also a passionate educator, running workshops on natural hair care throughout the year.
+          </p>
+          <div class="team-specialties">
+            <span class="tag">Curl Care</span>
+            <span class="tag">Locs</span>
+            <span class="tag">Protective Styles</span>
+            <span class="tag">Natural Hair</span>
+          </div>
+        </div>
+
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Velo Hair Co. All rights reserved.</span>
-      <span>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></span>
+  </section>
+
+  <!-- TEAM CRAFTSMANSHIP ROW -->
+  <section class="bg-charcoal">
+    <div class="container">
+      <div class="text-center reveal mb-48">
+        <span class="overline">The Collective</span>
+        <h2 class="text-cream">United by craft</h2>
+      </div>
+      <div class="grid-3-gap2 reveal">
+        <div class="img-hover-zoom craft-img-wrap">
+          <img src="images/velo-craft-team-collaboration.jpg" alt="Team collaboration" class="img-cover-dim">
+        </div>
+        <div class="img-hover-zoom craft-img-wrap">
+          <img src="images/velo-action-wet-cutting.jpg" alt="Wet cutting technique" class="img-cover-dim">
+        </div>
+        <div class="img-hover-zoom craft-img-wrap">
+          <img src="images/velo-action-color-rings.jpg" alt="Color rings selection" class="img-cover-dim">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOIN US -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="experience-grid">
+        <div class="experience-copy reveal-left">
+          <span class="overline">Join Our Team</span>
+          <h2>Are you an artist<br><em>seeking a home?</em></h2>
+          <div class="divider"></div>
+          <p>
+            Velo is always interested in meeting exceptional stylists who share our values. We offer competitive commission, continuing education sponsorship, and a studio environment where creativity is genuinely nurtured.
+          </p>
+          <p>
+            If you're passionate about craft and believe in the kind of client experience we provide, we'd love to have a conversation.
+          </p>
+          <a href="contact.html" class="btn btn-ghost mt-16">Get in Touch →</a>
+        </div>
+        <div class="experience-images reveal-right">
+          <img class="exp-img-main" src="images/velo-craft-precision-shear-cut.jpg" alt="Precision craft">
+          <img class="exp-img-float" src="images/velo-action-sectioning-comb.jpg" alt="Styling in action">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <span class="overline reveal">Your Artist Is Waiting</span>
+      <h2 class="reveal reveal-delay-1">Book with a Velo artist today</h2>
+      <p class="reveal reveal-delay-2">Choose your preferred stylist when booking, or let us match you with the artist best suited to your hair goals.</p>
+      <button class="btn btn-outline book-trigger reveal reveal-delay-3">Reserve Your Appointment →</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Velo <span>Hair</span> Co</span>
+          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Navigate</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Hours</h6>
+          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
+        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="modalClose">&times;</button>
+      <span class="demo-modal-logo">Velo Hair Co</span>
+      <h3>Demo Site</h3>
+      <p>This is a demo site for display purposes only.</p>
+      <p>Online booking is not active in this preview.</p>
+      <div class="demo-modal-credit">
+        <p>Designed &amp; Built by</p>
+        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
+      </div>
     </div>
   </div>
-</footer>
 
-<!-- MODAL -->
-<div class="modal" id="demoModal">
-  <div class="modal-inner">
-    <button class="modal-close" aria-label="Close">×</button>
-    <span class="eyebrow">Demo Notice</span>
-    <h3>This is a <em>demo site.</em></h3>
-    <p>This is a demo site for display purposes only. Built by Dyson Digital.</p>
-    <div class="credit">Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></div>
-  </div>
-</div>
-
-<script src="js/main.js"></script>
+  <script>
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
+    const modal = document.getElementById('demoModal');
+    document.querySelectorAll('.book-trigger').forEach(el => {
+      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
+    });
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

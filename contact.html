@@ -2,257 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Contact — Velo Hair Co.</title>
-  <meta name="description" content="Get in touch with Velo Hair Co. — reach the Ann Arbor studio for questions, consultations, or bookings.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Contact — Velo Hair Co</title>
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">Velo<i> hair</i><span class="dot">.</span>co</a>
-  <div class="nav-links">
+  <!-- NAV -->
+  <nav class="site-nav scrolled" id="siteNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="visit.html">Visit</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button class="nav-book-btn book-trigger">Book Appointment</button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <nav class="nav-mobile" id="mobileNav">
+    <button class="nav-mobile-close" id="mobileClose">&times;</button>
     <a href="index.html">Home</a>
     <a href="services.html">Services</a>
     <a href="gallery.html">Gallery</a>
     <a href="story.html">Our Story</a>
     <a href="team.html">Team</a>
     <a href="visit.html">Visit</a>
-    <a href="contact.html" class="active">Contact</a>
-  </div>
-  <a href="#" class="nav-cta js-book" data-demo>Book Now</a>
-  <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-<!-- HERO -->
-<section class="contact-hero">
-  <div class="wrap">
-    <span class="eyebrow center reveal">Get in Touch</span>
-    <h1 class="reveal delay-1">We'd love to <em>hear</em> from you.</h1>
-    <p class="reveal delay-2">Questions about services, wanting a consultation, planning a change — the studio responds to every message personally, usually within one business day.</p>
-  </div>
-</section>
-
-<!-- CONTACT GRID -->
-<section class="wrap">
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <h3>Reach the <em>studio.</em></h3>
-
-      <div class="block">
-        <span class="label">Visit</span>
-        <div class="val">
-          312 S. Main Street<br>
-          Ann Arbor, MI 48104
-        </div>
-      </div>
-
-      <div class="block">
-        <span class="label">Email</span>
-        <div class="val"><a href="#" class="js-contact" data-demo>hello@velohair.co</a></div>
-      </div>
-
-      <div class="block">
-        <span class="label">Phone</span>
-        <div class="val"><a href="#" class="js-contact" data-demo>(734) 555-0142</a></div>
-      </div>
-
-      <div class="block">
-        <span class="label">Hours</span>
-        <div class="val">
-          Tuesday — Friday · 10–7<br>
-          Saturday · 9–5<br>
-          Sunday &amp; Monday · Closed
-        </div>
-      </div>
-
-      <div class="block">
-        <span class="label">Press &amp; Collaborations</span>
-        <div class="val"><a href="#" class="js-contact" data-demo>press@velohair.co</a></div>
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-bg">
+      <img src="images/velo-experience-stylist-care.png" alt="Velo stylist care">
+    </div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="container">
+        <span class="overline">Get In Touch</span>
+        <h1>Contact</h1>
       </div>
     </div>
-
-    <form class="contact-form reveal delay-1" data-demo-form novalidate>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="first">First Name</label>
-          <input type="text" id="first" name="first" autocomplete="given-name" required>
-        </div>
-        <div class="form-field">
-          <label for="last">Last Name</label>
-          <input type="text" id="last" name="last" autocomplete="family-name" required>
-        </div>
-      </div>
-
-      <div class="form-row">
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
-        </div>
-        <div class="form-field">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel">
-        </div>
-      </div>
-
-      <div class="form-single">
-        <div class="form-field">
-          <label for="topic">I'm Writing About</label>
-          <select id="topic" name="topic">
-            <option value="consultation">Booking a consultation</option>
-            <option value="services">Question about a service</option>
-            <option value="color">Color correction / consult</option>
-            <option value="event">Wedding or event styling</option>
-            <option value="press">Press or collaboration</option>
-            <option value="other">Something else</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-single">
-        <div class="form-field">
-          <label for="stylist">Preferred Stylist (optional)</label>
-          <select id="stylist" name="stylist">
-            <option value="">No preference — match me</option>
-            <option value="marcus">Marcus · Founder &amp; Cutter</option>
-            <option value="nia">Nia · Senior Stylist</option>
-            <option value="sarah">Sarah · Waves &amp; Shape</option>
-            <option value="david">David · Fade Specialist</option>
-            <option value="elena">Elena · Master Colorist</option>
-            <option value="julian">Julian · Barber</option>
-            <option value="kassa">Kassa · Texture Specialist</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="form-single">
-        <div class="form-field">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" placeholder="Tell us a little about your hair and what you're hoping for — length, history, any images for inspiration. The more context, the better we can match you." required></textarea>
-        </div>
-      </div>
-
-      <button type="submit" class="btn">Send Message <span class="arrow">→</span></button>
-    </form>
   </div>
-</section>
 
-<!-- FAQ -->
-<section class="faq">
-  <div class="wrap">
-    <div class="team-header">
-      <div>
-        <span class="eyebrow reveal">Common Questions</span>
-        <h2 class="reveal delay-1">Before you <em>book.</em></h2>
+  <!-- CONTACT SECTION -->
+  <section class="section-pad bg-off-white">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div class="reveal-left">
+          <span class="overline">Send a Message</span>
+          <h2>Let's talk</h2>
+          <div class="divider"></div>
+          <p class="text-muted-sm mb-40">
+            Whether you have a question about a service, want to discuss a color consultation, or simply want to say hello — we'd love to hear from you.
+          </p>
+
+          <div class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Your first name">
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Your last name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="hello@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="(734) 000-0000">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>Select a service...</option>
+                <option>Haircut &amp; Styling</option>
+                <option>Color — Balayage or Highlights</option>
+                <option>Color — Single Process</option>
+                <option>Texture &amp; Curl Services</option>
+                <option>Men's Cut &amp; Grooming</option>
+                <option>Beard Sculpt</option>
+                <option>Color Correction</option>
+                <option>Bridal / Event Styling</option>
+                <option>General Inquiry</option>
+                <option>Employment Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="stylist">Preferred Artist (Optional)</label>
+              <select id="stylist" name="stylist">
+                <option value="" disabled selected>No preference / first available</option>
+                <option>Marcus — Founder &amp; Creative Director</option>
+                <option>Nia — Senior Stylist</option>
+                <option>Sarah — Wave Specialist</option>
+                <option>David — Fade Specialist</option>
+                <option>Elena — Master Colorist</option>
+                <option>Julian — Master Barber</option>
+                <option>Kassa — Texture Artist</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your hair goals, questions, or anything else you'd like us to know..."></textarea>
+            </div>
+            <div>
+              <button type="button" class="btn btn-primary contact-submit mt-8"><span>Send Message →</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- INFO PANEL -->
+        <div class="contact-info-panel reveal-right">
+          <span class="overline">Find Us</span>
+          <h3 class="contact-info-h3">Studio Information</h3>
+
+          <div class="contact-info-item">
+            <h5>Address</h5>
+            <p>123 S Main Street<br>Ann Arbor, MI 48104</p>
+          </div>
+
+          <div class="contact-info-item">
+            <h5>Phone</h5>
+            <p><a href="tel:7345550192">(734) 555-0192</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h5>Email</h5>
+            <p><a href="#" class="contact-submit">hello@velohairo.com</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h5>Instagram</h5>
+            <p><a href="#" class="contact-submit">@veloharico</a></p>
+          </div>
+
+          <div class="contact-info-item">
+            <h5>Studio Hours</h5>
+            <p>
+              Tue – Fri: 10:00 am – 7:00 pm<br>
+              Saturday: 9:00 am – 6:00 pm<br>
+              Sunday: 11:00 am – 4:00 pm<br>
+              Monday: Closed
+            </p>
+          </div>
+
+          <div class="contact-booking-box">
+            <h5 class="contact-booking-label">Ready to Book?</h5>
+            <p class="contact-booking-desc">Skip the form and book your appointment directly online.</p>
+            <button class="btn btn-primary book-trigger btn-full"><span>Book an Appointment</span></button>
+          </div>
+        </div>
+
       </div>
-      <p class="reveal delay-2">The questions we're asked most often by new guests. If your question isn't here, send us a note — we answer every message personally.</p>
+
+      <!-- FAQ SECTION -->
+      <div class="faq-section reveal">
+        <div class="text-center mb-56">
+          <span class="overline">Common Questions</span>
+          <h2>Frequently Asked</h2>
+          <div class="divider divider-center"></div>
+        </div>
+
+        <div class="faq-grid">
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do I need a consultation before booking?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>For major color services (balayage, highlights, color correction) and texture treatments, we do recommend a brief consultation — either in person or via phone — so your artist can fully understand your hair history and goals. For cuts and grooming services, you can book directly without a prior consultation.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What is your cancellation policy?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>We ask for at least 24 hours notice for cancellations or rescheduling. Late cancellations (under 12 hours) or no-shows may incur a fee of up to 50% of the scheduled service. We understand life happens — please just reach out as early as you can.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>What should I bring to my first appointment?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Bring inspiration images — screenshots from Instagram, Pinterest boards, photos of styles you love. The more visual references the better. Also come with clean, product-free hair if possible (particularly for color services). Most importantly, bring an open mind and be ready to have a real conversation with your artist.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>How long will my appointment take?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Service times vary. A men's cut typically takes 45–60 minutes. A women's cut and blowout is usually 60–90 minutes. Color services can range from 90 minutes (single process) to 4+ hours (full balayage with cut). Color correction services may require multiple sessions. We'll always give you an accurate time estimate when you book.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Do you accommodate all hair types and textures?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Absolutely. Our team is trained and experienced with all hair types — straight, wavy, curly, coily, fine, thick, chemically processed, natural, locs, and everything in between. Kassa specifically specializes in natural and textured hair. If you have specific concerns about your hair type, just mention it when booking and we'll match you with the right artist.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Can I request a specific stylist?</span>
+              <span class="faq-question-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              <p>Yes — and we encourage it. When booking, you can request any specific artist based on their specialty. If you're unsure who's right for your service, simply book without a preference and we'll match you with the best available artist for your needs. You can also send us a message through the form above if you'd like guidance.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="faq-grid">
-      <details class="faq-item reveal">
-        <summary>How far in advance should I book?</summary>
-        <div class="ans">For weekend appointments, we recommend booking two to three weeks ahead. Weekday mornings and afternoons usually have more flexibility, often within the same week. For new color clients and major changes, we block longer windows, so those slots fill earliest.</div>
-      </details>
-
-      <details class="faq-item reveal delay-1">
-        <summary>Do you offer free consultations?</summary>
-        <div class="ans">Yes — every new guest receives a complimentary twenty-minute consultation. Sit with one of our artists, share your hair history and what you're hoping for, and leave with a clear plan. There's no pressure to book at the end of the consultation.</div>
-      </details>
-
-      <details class="faq-item reveal delay-2">
-        <summary>What should I bring to my first appointment?</summary>
-        <div class="ans">Come with your hair in the state you wear it most — no fresh wash, no heavy product. Bring two or three inspiration photos if you have them. Your stylist will translate the shapes and tones to work with your hair density and face shape.</div>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary>What is your cancellation policy?</summary>
-        <div class="ans">We ask for forty-eight hours' notice on any cancellation or reschedule. Late cancellations and no-shows are charged fifty percent of the booked service, which helps us respect the time our stylists have set aside for you.</div>
-      </details>
-
-      <details class="faq-item reveal delay-1">
-        <summary>Do you accept walk-ins?</summary>
-        <div class="ans">We don't. Every chair at Velo is booked by appointment, so each guest gets the stylist's full attention for the full duration of their service. Fringe trims between appointments with your regular stylist are the one exception — those are complimentary and you can walk in between 10 and 5.</div>
-      </details>
-
-      <details class="faq-item reveal delay-2">
-        <summary>Can you work with all hair types and textures?</summary>
-        <div class="ans">Yes. Our artists specialize across the full texture spectrum — from fine straight hair to coily and natural textures. When you reach out, let us know what kind of hair you have and we'll match you with the stylist whose specialty fits. Our texture program is led by Kassa, one of our senior artists.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-band">
-  <div class="wrap">
-    <span class="eyebrow center reveal">Ready</span>
-    <h2 class="reveal delay-1">We can't wait to <em>meet you.</em></h2>
-    <p class="reveal delay-2">Reserve a chair online or send us a note. Either way, your first consultation is on the house.</p>
-    <a href="#" class="btn btn-gold reveal delay-3 js-book" data-demo>Book Your Visit <span class="arrow">→</span></a>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Velo<i> hair</i>.co</div>
-        <p>An editorial boutique salon in the heart of downtown Ann Arbor. Precision cuts, dimensional color, and a studio built for the way you actually live.</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="footer-logo">Velo <span>Hair</span> Co</span>
+          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
+        </div>
+        <div class="footer-col">
+          <h6>Navigate</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="story.html">Our Story</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>Hours</h6>
+          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
+        </div>
+        <div class="footer-col">
+          <h6>Contact</h6>
+          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
+        </div>
       </div>
-      <div>
-        <h5>Studio</h5>
-        <address class="footer-address">
-          312 S. Main Street<br>
-          Ann Arbor, MI 48104<br><br>
-          <a href="#" class="js-contact" data-demo>hello@velohair.co</a><br>
-          <a href="#" class="js-contact" data-demo>(734) 555-0142</a>
-        </address>
-      </div>
-      <div>
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="story.html">Our Story</a></li>
-          <li><a href="team.html">Team</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Hours</h5>
-        <ul>
-          <li>Tuesday — Friday · 10–7</li>
-          <li>Saturday · 9–5</li>
-          <li>Sunday &amp; Monday · Closed</li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
+        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span>© 2026 Velo Hair Co. All rights reserved.</span>
-      <span>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></span>
+  </footer>
+
+  <!-- DEMO MODAL -->
+  <div class="demo-modal" id="demoModal">
+    <div class="demo-modal-box">
+      <button class="demo-modal-close" id="modalClose">&times;</button>
+      <span class="demo-modal-logo">Velo Hair Co</span>
+      <h3>Demo Site</h3>
+      <p>This is a demo site for display purposes only.</p>
+      <p>Contact forms and booking are not active in this preview.</p>
+      <div class="demo-modal-credit">
+        <p>Designed &amp; Built by</p>
+        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
+      </div>
     </div>
   </div>
-</footer>
 
-<!-- MODAL -->
-<div class="modal" id="demoModal">
-  <div class="modal-inner">
-    <button class="modal-close" aria-label="Close">×</button>
-    <span class="eyebrow">Demo Notice</span>
-    <h3>This is a <em>demo site.</em></h3>
-    <p>This is a demo site for display purposes only. Built by Dyson Digital.</p>
-    <div class="credit">Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener" data-allow>Dyson Digital</a></div>
-  </div>
-</div>
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
 
-<script src="js/main.js"></script>
+    // Mobile nav
+    document.getElementById('navToggle').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileNav').classList.remove('open');
+    });
+
+    // Demo modal — book + contact triggers
+    const modal = document.getElementById('demoModal');
+    function openModal(e) {
+      e.preventDefault();
+      modal.classList.add('open');
+    }
+    document.querySelectorAll('.book-trigger').forEach(el => el.addEventListener('click', openModal));
+    document.querySelectorAll('.contact-submit').forEach(el => el.addEventListener('click', openModal));
+    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // Reveal
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
