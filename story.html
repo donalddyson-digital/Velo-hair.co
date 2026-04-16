@@ -2,20 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
-  <title>Our Story — Velo Hair Co</title>
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <meta name="description" content="The Velo Co. Salon story — founded in Ann Arbor on craft, community, and the belief that every haircut should feel intentional.">
+  <title>Our Story | Velo Co. Salon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="site-nav scrolled" id="siteNav">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo">Velo <span>Hair</span> Co</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+  <nav class="site-nav scrolled" id="siteNav" aria-label="Main navigation">
+    <div class="site-nav-inner">
+      <a href="index.html" class="nav-logo">Velo Co.</a>
+      <ul class="nav-links" role="list">
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="story.html" class="active">Our Story</a></li>
@@ -23,274 +24,181 @@
         <li><a href="visit.html">Visit</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <button class="nav-book-btn book-trigger">Book Appointment</button>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#" class="btn nav-cta demo-trigger">Book Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
-  <nav class="nav-mobile" id="mobileNav">
-    <button class="nav-mobile-close" id="mobileClose">&times;</button>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="story.html">Our Story</a>
-    <a href="team.html">Team</a>
-    <a href="visit.html">Visit</a>
-    <a href="contact.html">Contact</a>
+  <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobileClose" aria-label="Close menu">&#x2715;</button>
+    <a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a>
+    <a href="story.html">Our Story</a><a href="team.html">Team</a><a href="visit.html">Visit</a>
+    <a href="contact.html">Contact</a><a href="#" class="mobile-cta demo-trigger">Book Now</a>
   </nav>
 
-  <!-- STORY OPENER -->
-  <div class="story-opener pt-nav">
-    <div class="story-opener-img reveal-left">
-      <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Velo Hair Co interior">
+  <section class="page-hero" aria-label="Our Story hero">
+    <img src="images/velo-hair-co-ann-arbor-storefront.jpg" alt="Velo Co. Salon storefront" class="page-hero-img" loading="lazy">
+    <div class="page-hero-overlay" aria-hidden="true"></div>
+    <div class="page-hero-content">
+      <span class="eyebrow">Who We Are</span>
+      <h1>Our <em>Story</em></h1>
     </div>
-    <div class="story-opener-text reveal-right">
-      <div>
-        <span class="overline">Ann Arbor, Michigan · Est. 2012</span>
-        <h1>Our<br><em>Story</em></h1>
-        <div class="divider"></div>
-        <p>Velo Hair Co was born from a simple belief: that every person deserves a hair experience built around genuine artistry, deep listening, and uncompromising quality.</p>
-        <p>What began as Marcus's solo studio on a quiet Ann Arbor side street has grown into a seven-person collective of artists — each extraordinary in their own right, united by shared values and a relentless passion for craft.</p>
-      </div>
-    </div>
-  </div>
+  </section>
 
-  <!-- PULL QUOTE -->
-  <div class="story-pull-quote">
-    <div class="container">
-      <p class="pull-quote-text reveal">
-        "We don't just cut hair. We create the version of yourself you've always imagined."
-      </p>
-      <span class="pull-quote-attr reveal reveal-delay-2">— Marcus, Founder &amp; Creative Director</span>
-    </div>
-  </div>
-
-  <!-- ORIGIN STORY -->
-  <section class="section-pad bg-off-white">
-    <div class="container">
-      <div class="story-floating-row">
-        <div class="story-text reveal-left">
-          <span class="overline">The Beginning</span>
-          <h2>Where it all started</h2>
-          <div class="divider"></div>
-          <p>
-            Marcus opened Velo in 2012 after a decade of training under master stylists in Chicago, New York, and London. He returned to Ann Arbor — the city where he grew up — with a vision for something the community was missing: a salon that treated every client as a collaborator rather than a customer.
-          </p>
-          <p>
-            The name "Velo" comes from the concept of velocity and movement — hair in constant flow, style always evolving. It speaks to the kinetic energy of a great cut, the momentum of creative partnership, and the idea that style is never static.
-          </p>
-          <p>
-            In the first year, Velo operated as a two-chair studio. By word of mouth alone, the appointment books were full within six months. The reputation was built not on marketing, but on the quality of the work and the warmth of the experience.
-          </p>
+  <!-- STORY OPENING -->
+  <section class="story-opening section bg-cream" aria-label="Founding story">
+    <div class="section-inner">
+      <div class="story-opening-grid">
+        <div class="story-floating-imgs reveal-left" aria-hidden="true">
+          <img src="images/velo-hair-co-interior-styling-station.jpg" alt="Velo Co. interior" class="story-img-main" loading="lazy">
+          <img src="images/velo-experience-lounge-wait.png" alt="Velo Co. lounge area" class="story-img-accent" loading="lazy">
         </div>
-        <div class="story-floating-imgs reveal-right">
-          <img class="story-float-a" src="images/velo-experience-stylist-care.png" alt="Stylist care detail">
-          <img class="story-float-b" src="images/velo-experience-shampoo-bowl.png" alt="Shampoo bowl experience">
+        <div class="story-text reveal-right">
+          <span class="eyebrow">The Beginning</span>
+          <h2>Born from a belief<br>that <span class="italic-serif">craft matters.</span></h2>
+          <div class="gold-line-left"></div>
+          <p>Velo Co. started with Marcus and a clear conviction: that haircare in Ann Arbor deserved something more intentional. Not just a service, but an experience — a space where technique meets genuine human connection.</p>
+          <p class="mt-14">In 2013, he opened the doors to what was then a single-chair studio on the corner of Liberty and Division. The name? Velo — from the Latin for "to unveil." Because Marcus believed that the best haircut does not change who you are. It reveals who you already are.</p>
+          <p class="mt-14">More than a decade later, that philosophy still lives in every shampoo, every snip, every conversation in our chairs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CRAFT IMAGE TRIO -->
-  <div class="story-image-trio">
-    <div class="overflow-hidden img-hover-zoom">
-      <img src="images/velo-craft-balayage-painting.jpg" alt="Balayage painting craft">
-    </div>
-    <div class="overflow-hidden trio-b img-hover-zoom">
-      <img src="images/velo-action-foil-prep.jpg" alt="Foil preparation">
-    </div>
-    <div class="overflow-hidden trio-c img-hover-zoom">
-      <img src="images/velo-craft-precision-shear-cut.jpg" alt="Precision shear cut">
-    </div>
-  </div>
-
-  <!-- STUDIO SECTION -->
-  <section class="section-pad bg-cream">
-    <div class="container">
-      <div class="story-floating-row dir-rtl">
-        <div class="story-floating-imgs reveal-left dir-ltr">
-          <img class="story-float-a" src="images/velo-experience-lounge-wait.PNG" alt="Velo lounge area">
-          <img class="story-float-b" src="images/velo-client-mens-grooming.png" alt="Men's grooming at Velo">
-        </div>
-        <div class="story-text reveal-right dir-ltr">
-          <span class="overline">The Space</span>
-          <h2>A studio built with intention</h2>
-          <div class="divider"></div>
-          <p>
-            The Velo studio was designed to feel like a private atelier — not a traditional salon floor. Every element, from the lighting temperature to the music curation, was chosen to create a calm, focused environment where both client and artist can do their best work.
-          </p>
-          <p>
-            We invested in the finest professional equipment, sourced sustainable and non-toxic products, and built a lounge where waiting feels like a pleasure rather than a necessity.
-          </p>
-          <p>
-            When you're in the chair at Velo, you're our only focus. Every artist is trained to be fully present — no rushing, no double-booking, no corners cut.
-          </p>
-        </div>
+  <!-- STORY FLOAT SECTION -->
+  <section class="story-float-section" aria-label="Our belief">
+    <img src="images/velo-experience-stylist-care.png" alt="" class="float-cutout float-story-right" aria-hidden="true" loading="lazy">
+    <img src="images/velo-experience-shampoo-bowl.png" alt="" class="float-cutout float-story-left" aria-hidden="true" loading="lazy">
+    <div class="section-inner float-section-inner">
+      <div class="reveal section-centered">
+        <span class="eyebrow">Our Belief</span>
+        <h2 class="h2-white">Slow down.<br><span class="italic-serif">Feel the difference.</span></h2>
+        <div class="gold-line"></div>
+        <p class="story-float-quote">In a world of fast appointments and conveyor-belt service, Velo Co. is a deliberate pause. A space where the music is right, the consultation is real, and the finish is always worth the wait.</p>
+        <a href="#" class="btn btn-ghost demo-trigger">Book the Experience</a>
       </div>
     </div>
   </section>
 
-  <!-- STUDIO VIVID IMAGES -->
-  <section>
-    <div class="grid-4-gap2">
-      <div class="img-hover-zoom h-300 overflow-hidden">
-        <img src="images/velo-studio-vibrant-purple-color.jpg" alt="Vibrant purple color" class="img-cover">
+  <!-- TIMELINE -->
+  <section class="story-timeline section bg-light" aria-label="Velo Co. timeline">
+    <div class="section-inner">
+      <div class="text-center reveal mb-24">
+        <span class="eyebrow">How We Got Here</span>
+        <h2>A decade of<br><span class="italic-serif">growing with purpose.</span></h2>
+        <div class="gold-line"></div>
       </div>
-      <div class="img-hover-zoom h-300 overflow-hidden">
-        <img src="images/velo-studio-vibrant-pink-stylin.jpg" alt="Vibrant pink styling" class="img-cover">
-      </div>
-      <div class="img-hover-zoom h-300 overflow-hidden">
-        <img src="images/velo-studio-vibrant-orange-prep.jpg" alt="Vibrant orange prep" class="img-cover">
-      </div>
-      <div class="img-hover-zoom h-300 overflow-hidden">
-        <img src="images/velo-studio-lavender-process.jpg" alt="Lavender color process" class="img-cover">
+      <div class="timeline" role="list">
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2013</div>
+          <div class="timeline-content"><h4>The First Chair</h4><p>Marcus opens a single-chair studio on Liberty Street. Word spreads quickly — the waitlist forms before the paint is dry.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content"><h4>The Team Begins</h4><p>Nia joins as the second stylist. The studio expands to four chairs, and the first shampoo bowl is installed in-house.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-content"><h4>Color Program Launches</h4><p>Elena joins as Color Director, bringing a refined editorial approach. The color program becomes the fastest-growing service at Velo Co.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content"><h4>The Big Move</h4><p>Velo Co. relocates to its current home — a full boutique studio with eight stations, a dedicated color bar, and a designed lounge.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-content"><h4>Through the Storm</h4><p>Like all small businesses, we adapted. Curbside consultations, safety-first protocols, and a renewed appreciation for community kept us going.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
+        <div class="timeline-item reveal" role="listitem">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content"><h4>Still Here. Still Growing.</h4><p>Seven stylists, 2,400+ clients, and the same singular focus. Velo Co. continues to be Ann Arbor's most trusted boutique studio.</p></div>
+          <div class="timeline-dot" aria-hidden="true"></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- VALUES -->
-  <section class="section-pad bg-off-white">
-    <div class="container">
-      <div class="text-center reveal mb-56">
-        <span class="overline">What We Stand For</span>
-        <h2>Our values</h2>
-        <div class="divider divider-center"></div>
+  <section class="story-values section bg-cream" aria-label="Our values">
+    <div class="section-inner">
+      <div class="text-center reveal mb-20">
+        <span class="eyebrow">What Guides Us</span>
+        <h2>The values behind<br><span class="italic-serif">every appointment.</span></h2>
+        <div class="gold-line"></div>
       </div>
-      <div class="story-values">
-        <div class="story-value reveal">
-          <h4>Artistry First</h4>
-          <p>We approach every service as a creative act. No formula, no shortcuts — only thoughtful, skilled work that honors the individual in front of us.</p>
-        </div>
-        <div class="story-value reveal reveal-delay-2">
-          <h4>Deep Listening</h4>
-          <p>The best haircut starts before scissors are picked up. We listen — really listen — to understand your vision, your lifestyle, and your relationship with your hair.</p>
-        </div>
-        <div class="story-value reveal reveal-delay-3">
-          <h4>Continuous Education</h4>
-          <p>The beauty industry never stops evolving and neither do we. Our team trains regularly with global educators to stay at the forefront of technique and trend.</p>
-        </div>
-        <div class="story-value reveal reveal-delay-1 col-1">
-          <h4>Inclusive Excellence</h4>
-          <p>Velo serves every hair type, texture, gender, and identity with equal skill and respect. Our team is trained across all spectrums of hair care.</p>
-        </div>
-        <div class="story-value reveal reveal-delay-2 col-2">
-          <h4>Community Roots</h4>
-          <p>Ann Arbor made us. We support local, give back when we can, and believe a great neighborhood salon is a civic asset — not just a business.</p>
-        </div>
-        <div class="story-value reveal reveal-delay-3">
-          <h4>Sustainability</h4>
-          <p>We use and recommend products that are better for hair and for the planet. We've eliminated single-use plastics and partnered with sustainable brands.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ACTION COLOR MIXING FULL PANEL -->
-  <section>
-    <div class="story-hero-panel">
-      <img src="images/velo-action-color-mixing.png" alt="Color artistry in action" class="img-cover">
-      <div class="story-hero-overlay">
-        <div class="container">
-          <div class="max-w-500">
-            <span class="overline">The Future of Velo</span>
-            <h2 class="text-cream">Always growing,<br><em>always learning</em></h2>
-            <div class="divider"></div>
-            <p class="text-cream-70">
-              As we grow, we remain committed to the principles that made us: small team, high standards, personal connection. Velo will never be a volume salon. We'd rather do fewer things beautifully.
-            </p>
-            <a href="team.html" class="btn btn-outline reveal">Meet the Artists →</a>
-          </div>
-        </div>
+      <div class="values-grid">
+        <div class="value-card reveal"><div class="value-num">01</div><h4>Craft First</h4><p>We invest in education, tools, and technique because the quality of our work is the only thing that truly speaks for itself.</p></div>
+        <div class="value-card reveal"><div class="value-num">02</div><h4>Deep Listening</h4><p>The consultation is not a formality. It is the most important part of the service. We ask questions, we listen, and we remember.</p></div>
+        <div class="value-card reveal"><div class="value-num">03</div><h4>Intentional Space</h4><p>Everything about our studio — the light, the music, the layout — is designed to help you feel calm, seen, and at ease.</p></div>
+        <div class="value-card reveal"><div class="value-num">04</div><h4>Community Roots</h4><p>Ann Arbor made us. We support local suppliers, hire locally, and stay deeply connected to the community we serve.</p></div>
+        <div class="value-card reveal"><div class="value-num">05</div><h4>Sustainable Practices</h4><p>From our color line choices to our waste management, we operate with a conscience — because the planet is everyone's concern.</p></div>
+        <div class="value-card reveal"><div class="value-num">06</div><h4>Zero Ego</h4><p>We are here for you, not for ourselves. No gatekeeping, no jargon, no judgment — just exceptional work done with genuine care.</p></div>
       </div>
     </div>
   </section>
 
   <!-- CTA BAND -->
-  <section class="cta-band">
-    <div class="container">
-      <span class="overline reveal">Be Part of the Story</span>
-      <h2 class="reveal reveal-delay-1">We'd love to meet you</h2>
-      <p class="reveal reveal-delay-2">Come experience the Velo difference firsthand. Book a consultation and let's create something together.</p>
-      <button class="btn btn-outline book-trigger reveal reveal-delay-3">Book a Consultation →</button>
+  <section class="cta-band" aria-label="Book appointment">
+    <div class="container reveal">
+      <span class="eyebrow">Come See Us</span>
+      <h2>The story continues<br><span class="italic-serif">with your next visit.</span></h2>
+      <div class="gold-line"></div>
+      <p>We would love to have you in the chair. Book online or give us a call.</p>
+      <div class="hero-btns-center">
+        <a href="#" class="btn btn-primary demo-trigger">Book Now</a>
+        <a href="team.html" class="btn btn-outline">Meet the Team</a>
+      </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <span class="footer-logo">Velo <span>Hair</span> Co</span>
-          <p>A boutique hair studio where seven master artists craft precision, creativity, and genuine transformation in the heart of Ann Arbor, Michigan.</p>
-        </div>
-        <div class="footer-col">
-          <h6>Navigate</h6>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="story.html">Our Story</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="visit.html">Visit</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h6>Hours</h6>
-          <p>Tue–Fri: 10am – 7pm<br>Saturday: 9am – 6pm<br>Sunday: 11am – 4pm<br>Monday: Closed</p>
-        </div>
-        <div class="footer-col">
-          <h6>Contact</h6>
-          <p>123 S Main Street<br>Ann Arbor, MI 48104<br><br>hello@velohairo.com<br>(734) 555-0192</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Velo Hair Co. All rights reserved.</p>
-        <p>Website by <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a></p>
-      </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="logo-footer">Velo Co.</span><p>A boutique hair studio in the heart of Ann Arbor. Precision, artistry, and genuine care — every single visit.</p></div>
+      <div class="footer-col"><h5>Navigate</h5><a href="index.html">Home</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="story.html">Our Story</a><a href="team.html">Team</a></div>
+      <div class="footer-col"><h5>Visit</h5><a href="visit.html">Directions</a><a href="contact.html">Contact</a><a href="#" class="demo-trigger">Book Online</a><a href="visit.html">Hours</a></div>
+      <div class="footer-col"><h5>Hours</h5><a href="#">Mon – Fri: 9am – 7pm</a><a href="#">Saturday: 9am – 6pm</a><a href="#">Sunday: Closed</a><a href="tel:+17345550192">(734) 555-0192</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Velo Co. Salon. All rights reserved.</p>
+      <p>Portfolio demo. Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a>.</p>
     </div>
   </footer>
 
-  <!-- DEMO MODAL -->
-  <div class="demo-modal" id="demoModal">
-    <div class="demo-modal-box">
-      <button class="demo-modal-close" id="modalClose">&times;</button>
-      <span class="demo-modal-logo">Velo Hair Co</span>
-      <h3>Demo Site</h3>
-      <p>This is a demo site for display purposes only.</p>
-      <p>Online booking is not active in this preview.</p>
-      <div class="demo-modal-credit">
-        <p>Designed &amp; Built by</p>
-        <a href="https://dysondigital.com/" target="_blank" rel="noopener">Dyson Digital</a>
-      </div>
+  <div class="demo-modal-overlay" id="demoModal" role="dialog" aria-modal="true" aria-label="Demo notice">
+    <div class="demo-modal">
+      <button class="demo-modal-close" id="demoModalClose" aria-label="Close modal">&#x2715;</button>
+      <div class="modal-logo">Velo Co.</div><div class="modal-line"></div>
+      <h3>This is a Demo Site</h3>
+      <p>This website is a portfolio demonstration and display piece only. No appointments can be scheduled, no purchases can be made, and no forms are active.</p>
+      <p class="modal-builder">Built by <a href="https://dysondigital.com" target="_blank" rel="noopener noreferrer">Dyson Digital</a></p>
+      <button class="btn modal-dismiss" id="modalDismiss">Got It</button>
     </div>
   </div>
 
   <script>
-    const nav = document.getElementById('siteNav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 60);
-    });
-    document.getElementById('navToggle').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.add('open');
-    });
-    document.getElementById('mobileClose').addEventListener('click', () => {
-      document.getElementById('mobileNav').classList.remove('open');
-    });
-    const modal = document.getElementById('demoModal');
-    document.querySelectorAll('.book-trigger').forEach(el => {
-      el.addEventListener('click', e => { e.preventDefault(); modal.classList.add('open'); });
-    });
-    document.getElementById('modalClose').addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
-    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-    reveals.forEach(el => observer.observe(el));
+    const siteNav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => { siteNav.classList.toggle('scrolled', window.scrollY > 60); });
+    const navToggle = document.getElementById('navToggle'), mobileMenu = document.getElementById('navMobile'), mobileClose = document.getElementById('mobileClose');
+    function openMenu() { navMobile.classList.add('open'); navToggle.classList.add('open'); navToggle.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; }
+    function closeMenu() { navMobile.classList.remove('open'); navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+    navToggle.addEventListener('click', () => navMobile.classList.contains('open') ? closeMenu() : openMenu());
+    mobileClose.addEventListener('click', closeMenu);
+    navMobile.addEventListener('click', (e) => { if (e.target.closest('a')) closeMenu(); });
+    const demoModal = document.getElementById('demoModal');
+    document.querySelectorAll('.demo-trigger').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); demoModal.classList.add('active'); document.body.style.overflow='hidden'; }));
+    function closeModal() { demoModal.classList.remove('active'); document.body.style.overflow=''; }
+    document.getElementById('demoModalClose').addEventListener('click', closeModal);
+    document.getElementById('modalDismiss').addEventListener('click', closeModal);
+    demoModal.addEventListener('click', (e) => { if (e.target === demoModal) closeModal(); });
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.1 });
+    revealEls.forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
