@@ -1372,3 +1372,31 @@ footer {
   .exp-img-main { width: 100%; }
 }
 
+/* ── DYSON DIGITAL POLISH (CLAUDE-INSPIRED) ── */
+
+/* Update the fonts to the more modern DM Sans */
+body {
+  font-family: 'DM Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smoother Hover Effects for all buttons */
+.btn, .nav-links a, .service-item {
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* A cleaner scroll shadow for the Nav */
+.site-nav.scrolled {
+  background: rgba(249,248,245,0.97) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05) !important;
+}
+
+/* Ensure the floating PNGs stay tight (Dyson Digital Original Fix) */
+.experience-images, .story-floating-imgs {
+  height: auto !important;
+  min-height: 380px !important;
+  margin-bottom: 0 !important;
+}
+
+
