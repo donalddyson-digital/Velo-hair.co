@@ -2682,41 +2682,40 @@ h5 { font-size: 1.1rem; font-weight: 500; }
   }
 }
 
-/* ── THE VELO OVERLAP FIX (NO GAPS) ── */
+/* ── THE VELO FLOATING OVERLAP (NO GAPS) ── */
 
 .experience-images, 
 .story-floating-imgs {
-  position: relative !important;
-  /* This height is the "Goldilocks" zone—enough for overlap, no extra gap */
-  height: 380px !important; 
-  margin-bottom: 20px !important;
-  width: 100%;
+  display: block !important;
+  height: auto !important; /* Kills the fixed gap box */
+  position: relative;
+  padding-bottom: 120px; /* This creates the "float" space naturally */
 }
 
-/* The Background Image */
+/* The Base Image (Left) */
 .exp-img-main, .story-float-a {
-  position: absolute !important;
-  width: 75% !important;
-  top: 0 !important;
-  left: 0 !important;
+  position: relative !important; /* It stays in the flow to push content down */
+  width: 80% !important;
   z-index: 1;
+  display: block;
 }
 
-/* The Foreground (Floating) Image */
+/* The Floating Image (Right) */
 .exp-img-float, .story-float-b {
-  position: absolute !important;
+  position: absolute !important; 
   width: 55% !important;
-  bottom: 10% !important; /* Pulls it up from the bottom to shrink the gap */
+  /* This pulls it up and over the first image */
+  bottom: 0 !important; 
   right: 0 !important;
   z-index: 2;
-  box-shadow: -10px 10px 30px rgba(0,0,0,0.1);
+  box-shadow: -15px 15px 40px rgba(0,0,0,0.12);
 }
 
-/* MOBILE: Shorter height to kill the mobile gap */
+/* MOBILE FIX: Tightens the overlap so it doesn't look stretched */
 @media (max-width: 700px) {
   .experience-images, .story-floating-imgs {
-    height: 280px !important; 
-    margin-top: 20px;
-    margin-bottom: 10px !important;
+    padding-bottom: 80px; /* Reduces the gap for smaller screens */
   }
+  .exp-img-main, .story-float-a { width: 85% !important; }
+  .exp-img-float, .story-float-b { width: 60% !important; }
 }
