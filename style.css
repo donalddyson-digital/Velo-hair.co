@@ -54,21 +54,22 @@ button { cursor: pointer; border: none; background: none; font-family: var(--fon
 /* ── Typography ── */
 h1, h2, h3, h4, h5 {
   font-family: var(--font-head);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.15;
   color: var(--dark);
 }
-h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); letter-spacing: -0.01em; }
-h2 { font-size: clamp(2rem, 4.5vw, 3.6rem); }
-h3 { font-size: clamp(1.4rem, 2.5vw, 2rem); }
-h4 { font-size: clamp(1.1rem, 2vw, 1.5rem); }
+h1 { font-size: clamp(2.8rem, 7vw, 5.5rem); letter-spacing: -0.01em; font-weight: 400; }
+h2 { font-size: clamp(2rem, 4.5vw, 3.6rem); font-weight: 500; }
+h3 { font-size: clamp(1.5rem, 2.5vw, 2.2rem); font-weight: 500; }
+h4 { font-size: clamp(1.15rem, 2vw, 1.6rem); font-weight: 600; }
+h5 { font-size: 1.05rem; font-weight: 700; }
 p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
 
 .eyebrow {
   font-family: var(--font-body);
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--gold);
   display: block;
@@ -350,14 +351,12 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 0 40px 80px;
-  max-width: 1280px;
+  padding: 0 60px 80px 60px;
+  max-width: 720px;
   width: 100%;
-  margin: 0 auto;
-  /* Indent the text block so it sits roughly 1/3 from left, not flush */
-  padding-left: max(40px, 8vw);
-  padding-right: 40px;
-  padding-bottom: 80px;
+  /* Centre the block horizontally with balanced margins */
+  margin-left: auto;
+  margin-right: auto;
 }
 .hero-content h1 { color: var(--white); font-weight: 300; margin-bottom: 22px; max-width: 680px; }
 .hero-content h1 em { font-style: italic; color: var(--gold); }
@@ -988,50 +987,56 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
 }
 
 /* Timeline */
-.story-timeline { padding: 48px 0; background: var(--light); }
+.story-timeline { padding: 72px 0; background: var(--light); }
 .timeline {
   position: relative;
-  max-width: 680px;
-  margin: 24px auto 0;
-  padding-left: 120px; /* room for year labels on left */
+  max-width: 780px;
+  margin: 40px auto 0;
+  padding-left: 160px;
 }
 .timeline::before {
   content: '';
   position: absolute;
-  left: 90px; top: 0; bottom: 0;
-  width: 1px;
-  background: var(--gold);
+  left: 120px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(197,163,125,0.2));
 }
 .timeline-item {
   position: relative;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(197,163,125,0.15);
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(197,163,125,0.2);
 }
-.timeline-item:last-child { border-bottom: none; margin-bottom: 0; }
-/* Year label — absolute left of the line */
+.timeline-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .timeline-year {
   font-family: var(--font-head);
-  font-size: 1.4rem;
+  font-size: 2rem;
+  font-weight: 500;
   color: var(--gold);
   font-style: italic;
   position: absolute;
-  left: -120px;
+  left: -160px;
   top: 0;
-  width: 100px;
+  width: 130px;
   text-align: right;
-  line-height: 1.2;
+  line-height: 1.1;
 }
-.timeline-content { padding-left: 24px; }
-.timeline-content h4 { margin-bottom: 4px; font-size: 1rem; }
-.timeline-content p  { font-size: 0.82rem; line-height: 1.7; }
+.timeline-content { padding-left: 32px; }
+.timeline-content h4 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.timeline-content p  { font-size: 0.9rem; line-height: 1.75; color: var(--mid); }
 .timeline-dot {
   position: absolute;
-  left: -34px; top: 4px;
-  width: 9px; height: 9px;
+  left: -42px; top: 6px;
+  width: 13px; height: 13px;
   border-radius: 50%;
   background: var(--gold);
-  border: 2px solid var(--light);
+  border: 3px solid var(--light);
+  box-shadow: 0 0 0 3px rgba(197,163,125,0.25);
 }
 
 /* Values */
@@ -1247,7 +1252,7 @@ footer {
   .container, .section-inner { padding: 0 24px; }
   .section { padding: var(--sec-pad) 24px; }
   .site-nav-inner { padding: 0 24px; }
-  .hero-content  { padding: 24px 24px 64px 24px; margin-left: 0; width: 100%; max-width: 100%; }
+  .hero-content  { padding: 24px 24px 64px; margin-left: 0; margin-right: 0; max-width: 100%; width: 100%; }
   .page-hero-content { padding: 0 24px 40px; }
   .intro-band-inner  { padding: 0 24px; }
   .footer-inner      { padding: 0 24px; }
@@ -1282,12 +1287,12 @@ footer {
   .story-img-accent    { width: 52%; margin-top: -50px; }
   .story-float-section { padding: 72px 0; }
 
-  /* Timeline mobile: tighten the left offset to fit narrower screens */
-  .timeline          { padding-left: 80px; }
-  .timeline::before  { left: 56px; }
-  .timeline-year     { left: -80px; width: 64px; font-size: 1.1rem; }
-  .timeline-content  { padding-left: 20px; }
-  .timeline-dot      { left: -28px; }
+  /* Timeline mobile: scale down proportionally, keep readable */
+  .timeline          { padding-left: 110px; max-width: 100%; }
+  .timeline::before  { left: 80px; }
+  .timeline-year     { left: -110px; width: 88px; font-size: 1.5rem; }
+  .timeline-content  { padding-left: 24px; }
+  .timeline-dot      { left: -36px; width: 11px; height: 11px; }
 
   .services-intro-grid { grid-template-columns: 1fr; gap: 40px; }
   .services-float-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1307,7 +1312,7 @@ footer {
   h1 { font-size: clamp(2.2rem, 9vw, 3rem); }
   h2 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
 
-  .hero-content { padding: 20px 20px 52px 20px; margin-left: 0; width: 100%; max-width: 100%; }
+  .hero-content { padding: 20px 20px 52px; margin-left: 0; margin-right: 0; max-width: 100%; width: 100%; }
   .hero-scroll  { display: none; }
   .hero-btns    { flex-direction: column; align-items: flex-start; }
   .hero-btns-center { flex-direction: column; align-items: center; }
@@ -1355,11 +1360,11 @@ footer {
   .story-img-accent    { display: none; }
 
   /* Timeline 600px: further compact for small screens */
-  .timeline          { padding-left: 64px; margin: 16px 16px 0; }
-  .timeline::before  { left: 44px; }
-  .timeline-year     { left: -64px; width: 50px; font-size: 1rem; }
-  .timeline-content  { padding-left: 16px; }
-  .timeline-dot      { left: -22px; }
+  .timeline          { padding-left: 80px; margin: 20px 16px 0; }
+  .timeline::before  { left: 56px; }
+  .timeline-year     { left: -80px; width: 62px; font-size: 1.25rem; }
+  .timeline-content  { padding-left: 18px; }
+  .timeline-dot      { left: -30px; width: 10px; height: 10px; }
   .contact-form   { padding: 28px 20px; }
 
   .storefront-banner        { height: 280px; }
