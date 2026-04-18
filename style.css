@@ -131,9 +131,9 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
   transition: background var(--trans), box-shadow var(--trans);
 }
 .site-nav.scrolled {
-  background: rgba(249,248,245,0.97);
+  background: rgba(249,248,245,0.98);
   backdrop-filter: blur(12px);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 0 rgba(30,30,27,0.1), var(--shadow-sm);
 }
 .site-nav.transparent { background: transparent; }
 
@@ -156,8 +156,8 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
   position: relative;
   z-index: 1;
 }
-.site-nav.transparent .nav-logo { color: var(--white); }
-.site-nav.scrolled   .nav-logo { color: var(--dark); }
+.site-nav.transparent .nav-logo { color: var(--white); text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+.site-nav.scrolled   .nav-logo { color: var(--dark); text-shadow: none; }
 
 .nav-links {
   display: flex;
@@ -173,8 +173,8 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
   position: relative;
   transition: color var(--trans);
 }
-.site-nav.transparent .nav-links a { color: rgba(255,255,255,0.88); }
-.site-nav.scrolled   .nav-links a { color: var(--dark); }
+.site-nav.transparent .nav-links a { color: var(--white); text-shadow: 0 1px 4px rgba(0,0,0,0.5); }
+.site-nav.scrolled   .nav-links a { color: var(--dark); text-shadow: none; }
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -322,7 +322,7 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 20%;
 }
 .hero-overlay {
   position: absolute;
@@ -843,12 +843,19 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
 
 /* Float cutout decorative images */
 .float-cutout { position: absolute; pointer-events: none; z-index: 1; }
-.float-services-right { right: -30px; bottom: -10px; width: 280px; opacity: 0.14; }
-.float-services-left  { left:  -25px; top:   25px;   width: 240px; opacity: 0.10; }
-.float-story-right    { right: -20px; bottom: -10px;  width: 300px; opacity: 0.13; }
-.float-story-left     { left:  -35px; top:    25px;   width: 220px; opacity: 0.09; }
+.float-services-right { right: -20px; bottom: -10px; width: 320px; opacity: 0.18; }
+.float-services-left  { left:  -20px; top:   20px;   width: 280px; opacity: 0.14; }
+.float-story-right    { right:  20px; top:   50%;     width: 260px; opacity: 0.22; transform: translateY(-50%); }
+.float-story-left     { left:   20px; top:   50%;     width: 220px; opacity: 0.18; transform: translateY(-50%); }
 .float-section-inner  { position: relative; z-index: 3; }
-.services-cutout-img  { width: 100%; max-width: 480px; display: block; margin-left: auto; }
+.services-cutout-img  {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 2px;
+  box-shadow: var(--shadow-md);
+}
 
 /* ── STORY PAGE ── */
 .story-opening { padding: var(--sec-pad) 0; background: var(--cream); }
@@ -924,8 +931,8 @@ p  { font-size: 0.95rem; color: var(--mid); line-height: 1.8; }
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  margin-bottom: 52px;
+  gap: 32px;
+  margin-bottom: 32px;
   align-items: center;
 }
 .timeline-item:nth-child(even) .timeline-content { grid-column: 2; }
@@ -1218,6 +1225,8 @@ footer {
   .hero-scroll  { display: none; }
   .hero-btns    { flex-direction: column; align-items: flex-start; }
   .hero-btns-center { flex-direction: column; align-items: center; }
+  /* Show more of the building on mobile — pull back framing */
+  .hero-bg { object-position: center 10%; }
 
   .about-strip-text { padding: 44px 20px; }
 
@@ -1237,6 +1246,12 @@ footer {
 
   .masonry-grid { columns: 2; column-gap: 8px; }
   .masonry-item { margin-bottom: 8px; }
+  /* Hide lightbox caption on mobile — image fills screen, text overlaps */
+  .lightbox-caption { display: none; }
+  /* Give lightbox more vertical room on mobile */
+  .lightbox-overlay { padding: 52px 16px 16px; }
+  .lightbox-img-wrap { max-height: 75vh; }
+  .lightbox-img-wrap img { max-height: 75vh; }
 
   .experience-stats { grid-template-columns: 1fr 1fr; }
 
@@ -1267,4 +1282,3 @@ footer {
   .team-grid    { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
-
