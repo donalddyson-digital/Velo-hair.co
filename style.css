@@ -337,7 +337,7 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   font-size: clamp(2.1rem, 3.8vw, 3.2rem);
   font-weight: 600;
   display: block;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   line-height: 1.2;
   letter-spacing: 0.02em;
   /* Bright metallic silver finish */
@@ -355,6 +355,24 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: #d0d0d5; /* fallback */
+}
+/* Metallic silver divider between welcome line and h1 */
+.hero-welcome::after {
+  content: '';
+  display: block;
+  width: clamp(80px, 18vw, 200px);
+  height: 1px;
+  margin: 14px 0 18px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #8a8a94 15%,
+    #e8e8ec 45%,
+    #ffffff 50%,
+    #e8e8ec 55%,
+    #8a8a94 85%,
+    transparent 100%
+  );
 }
 .hero {
   position: relative;
@@ -1449,3 +1467,4 @@ footer {
   .team-grid-section .team-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
+
