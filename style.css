@@ -336,11 +336,23 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   font-family: var(--font-head);
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 600;
-  color: var(--sage);
   display: block;
   margin-bottom: 1rem;
   line-height: 1.2;
   letter-spacing: 0.01em;
+  /* Khaki gold with brushed-metal shimmer */
+  background: linear-gradient(
+    105deg,
+    #8a7455 0%,
+    #B6A185 30%,
+    #d4bc9a 48%,
+    #B6A185 65%,
+    #8a7455 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #B6A185; /* fallback for browsers that don't support background-clip */
 }
 .hero {
   position: relative;
@@ -1435,4 +1447,3 @@ footer {
   .team-grid-section .team-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
-
