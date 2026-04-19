@@ -334,25 +334,25 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
 /* Hero welcome text — replaces Royal Oak, Michigan eyebrow on homepage */
 .hero-welcome {
   font-family: var(--font-head);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
   font-weight: 600;
   display: block;
   margin-bottom: 1rem;
   line-height: 1.2;
   letter-spacing: 0.01em;
-  /* Khaki gold with brushed-metal shimmer */
+  /* Metallic silver brushed-metal finish */
   background: linear-gradient(
     105deg,
-    #8a7455 0%,
-    #B6A185 30%,
-    #d4bc9a 48%,
-    #B6A185 65%,
-    #8a7455 100%
+    #7a7a82 0%,
+    #b8b9be 25%,
+    #e8e8ec 48%,
+    #b8b9be 72%,
+    #7a7a82 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: #B6A185; /* fallback for browsers that don't support background-clip */
+  color: #b8b9be; /* fallback */
 }
 .hero {
   position: relative;
@@ -1447,3 +1447,4 @@ footer {
   .team-grid-section .team-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
+
