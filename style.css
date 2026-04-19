@@ -340,21 +340,21 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   margin-bottom: 0;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  /* Bright metallic silver finish */
+  /* Bright metallic gold finish */
   background: linear-gradient(
     105deg,
-    #8a8a94 0%,
-    #c8cacf 20%,
-    #f0f0f4 45%,
-    #ffffff 50%,
-    #f0f0f4 55%,
-    #c8cacf 78%,
-    #8a8a94 100%
+    #a07840 0%,
+    #c5a37d 20%,
+    #f0d080 45%,
+    #ffe066 50%,
+    #f0d080 55%,
+    #c5a37d 78%,
+    #a07840 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  color: #d0d0d5; /* fallback */
+  color: #c5a37d; /* fallback */
 }
 /* Metallic silver divider between welcome line and h1 */
 .hero-welcome::after {
@@ -414,7 +414,24 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   margin-right: auto;
 }
 .hero-content h1 { color: var(--white); font-weight: 300; margin-bottom: 22px; max-width: 680px; }
-.hero-content h1 em { font-style: italic; color: var(--gold); }
+.hero-content h1 em {
+  font-style: italic;
+  /* Bright metallic gold finish — matches hero-welcome */
+  background: linear-gradient(
+    105deg,
+    #a07840 0%,
+    #c5a37d 20%,
+    #f0d080 45%,
+    #ffe066 50%,
+    #f0d080 55%,
+    #c5a37d 78%,
+    #a07840 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: #c5a37d; /* fallback */
+}
 .hero-content p { color: rgba(255,255,255,0.88); font-size: 1rem; max-width: 480px; margin-bottom: 36px; }
 .hero-btns       { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-btns-center { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 32px; }
