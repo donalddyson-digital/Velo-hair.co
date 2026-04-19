@@ -340,22 +340,9 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
   margin-bottom: 0;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  /* Bright metallic silver finish */
-  background: linear-gradient(
-    105deg,
-    #8a8a94 0%,
-    #c8cacf 20%,
-    #f0f0f4 45%,
-    #ffffff 50%,
-    #f0f0f4 55%,
-    #c8cacf 78%,
-    #8a8a94 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #d0d0d5; /* fallback */
-  /* Dark drop shadow behind the silver — improves readability over any background */
+  /* Warm cream — solid colour pops clearly over any hero image */
+  color: #f5efe6;
+  /* Strong shadow lifts the text off the background */
   text-shadow:
     0 2px 12px rgba(0,0,0,0.7),
     0 1px 4px  rgba(0,0,0,0.5);
@@ -420,22 +407,9 @@ p  { font-size: 1rem; color: var(--mid); line-height: 1.85; }
 .hero-content h1 { color: var(--white); font-weight: 300; margin-bottom: 22px; max-width: 680px; }
 .hero-content h1 em {
   font-style: italic;
-  /* Bright metallic silver finish — matches hero-welcome */
-  background: linear-gradient(
-    105deg,
-    #8a8a94 0%,
-    #c8cacf 20%,
-    #f0f0f4 45%,
-    #ffffff 50%,
-    #f0f0f4 55%,
-    #c8cacf 78%,
-    #8a8a94 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #d0d0d5; /* fallback */
-  /* Dark drop shadow behind the silver — improves readability over any background */
+  /* Warm gold — solid colour pops clearly against the dark hero overlay */
+  color: #d4aa70;
+  /* Strong shadow lifts the text off the background */
   text-shadow:
     0 2px 12px rgba(0,0,0,0.7),
     0 1px 4px  rgba(0,0,0,0.5);
